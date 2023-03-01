@@ -1,0 +1,78 @@
+html { font-size: 100%; 
+    overflow-y: scroll;
+     }
+
+body { margin: 0; 
+       font-size: 13px; 
+       line-height: 1.231; 
+       background-color:white; 
+      }
+
+/* caja grande*/
+.acordeon { width:700px; 
+            overflow:hidden; 
+            margin: 5% auto; 
+            background:#02a724; 
+            padding:15px; 
+        }
+
+/* ABIERTO */
+.acordeon section:target { background:#FFF;
+                           padding:19px;/*TAMAÑO INTERIOR */
+                         } 
+.acordeon section:target:hover { background:#FFF; }
+.acordeon section:target h2 {width:100%;}
+.acordeon section:target h2 a{  color:#000000;
+                                text-align: center; 
+                                padding: 0.1PX;}/*LETRA TITULO*/
+
+.acordeon section:target:before {display:none;}
+.acordeon section h2 a{ padding:05px ;/*LUGAR DE LETRA */
+                        display:block; 
+                        font-size:15px; 
+                        font-weight:normal;
+                        text-align: center;
+                        color:#eee; 
+                        text-decoration: none;
+                    } 
+
+/* CERRADO */
+.acordeon section{  float:center;   
+                    overflow:hidden; 
+                    color:#000000; 
+                    cursor:pointer; 
+                    background: #027017;
+                    margin:40px;/*TAMAÑO DE CAJITA VERDE GRANDE*/ 
+                 }
+.acordeon section:hover {background:#01881C;} /*CUANDO SE PONE EL CURSOR ENCIMA SE PONDRA DE ESTE COLORLA SECCION*/
+
+.acordeon section:before{position:relative;font-size:24px;color:#fffefe;font-weight:bold;}
+.acordeon section:nth-child(1):before{content:'1';}
+.acordeon section:nth-child(2):before{content:'2';}
+.acordeon section:nth-child(3):before{content:'3';}
+
+.horizontal section{ width:99px; height:250px; 
+    -moz-transition:width 0.1s ease-out; 
+    -webkit-transition:width 0.1s ease-out;
+    -o-transition:width 0.1s ease-out;
+    -ms-transition:width 0.1s ease-out;
+    transition:width 0.1s ease-out;
+}
+
+.horizontal section:before{top:3px;left:15px;} /*NUMERO DE VIÑETA POSICION*/
+
+/*ABRIR*/
+.horizontal :target{ width:73%;height:230px; }
+.horizontal :target h2{ top:0px;left:0;
+    -webkit-transform:rotate(0deg);
+    -moz-transform:rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg); 
+}
+
+
+
+
+
+
