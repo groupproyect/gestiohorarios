@@ -6,10 +6,10 @@
 </div>
 @section('contenido_cuadritos')
 
-<div id="caja_central">  
+ 
 	@foreach($muare as $re)
                 
-        
+    <div id="caja_central"> 
              <main id="background">
             <div class="texto_cuadritos">
                 <h1>{{$re->descripcion}}</h1> 
@@ -35,8 +35,9 @@
                   </td>
                    </div>
                 </div>
-            </div>
-        
+       
+            </main>
+        </div>
     @endforeach
 
 </div>

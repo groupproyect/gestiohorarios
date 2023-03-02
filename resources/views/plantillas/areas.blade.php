@@ -45,7 +45,23 @@
         margin-right: 10px;
        /* background-color: blue;*/
        }
-       #caja_central .cuadritos
+       #caja_central .main {
+          height: auto;
+          width: auto;
+          transition: background 2s;
+          display: inline-flex;
+          /*flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;*/
+          margin-top: 25px;
+          margin-bottom: 25px ;
+          margin-left: 50px;
+          margin-right:70px;
+          border-radius:30px;
+          border: 3px solid #0201016e;
+        }
+       /*.cuadritos
         { 
           border-radius: 30px;
           width: auto;
@@ -54,13 +70,13 @@
           margin-top: 25px;
           margin-bottom: 25px ;
           margin-left: 50px;
-          margin-right:70px;*/
+          margin-right:70px;
           border: 3px solid #0201016e;
           display:inline-flex;
         }
-
+*/
         
-                .cuadritos  .texto_cuadritos
+       .texto_cuadritos
         { 
           margin-left: 15px;
           margin-right: 15px;
@@ -140,7 +156,7 @@
         <u><h3> @yield('titulo') </h3></u>
         @yield('contenido_cuadritos')
         
-        
+        <script src="../resources/views/plantillas/main.js"></script>
                   
               
       
