@@ -22,7 +22,14 @@
             background-repeat:unset;
             background-size:38%;}*/
        
-            #titulo{
+        body{
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+          }
+        #titulo{
         margin-top:25px;
         font-family: 'Quicksand', sans-serif;
          text-align: center;
@@ -52,7 +59,8 @@
           display:inline-flex;
         }
 
-        .cuadritos  .texto_cuadritos
+        
+                .cuadritos  .texto_cuadritos
         { 
           margin-left: 15px;
           margin-right: 15px;
@@ -131,8 +139,6 @@
 
         <u><h3> @yield('titulo') </h3></u>
         @yield('contenido_cuadritos')
-        
-        
         
         
                   
