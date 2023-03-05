@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+        *
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width:100%;
+	height: 300px;
+    background-color: #ffffff;
+}
+
+table{
+    border: 2.5px;
+    width: 65%;
+    height: 500%;
+    margin-left: 20%;
+    margin-top:2%;
+    margin-right:20%;
+    /*padding: 45px 450px 20px 450px;*/
+    background-color:#b6b6b6;
+    border-radius:8px;
+    border-style:ridge;
+    font-family: 'Quicksand', sans-serif;
+
+}
+table th{
+    height:30px;
+    width:30px;
+    background-color:#ffffff;
+    border-radius:3px;
+    border-style:ridge;
+    border:black 2px solid;
+    font-family: 'Quicksand', sans-serif;
+
+}
+tr{
+   padding-bottom:10px;
+   padding-top:10px;
+}
+
+.jornada{
+    height: 80px;
+    align-content: center;
+    font-size: 30px;
+    font-family: 'Quicksand', sans-serif;
+    
+}
+
+.sub_jornada{
+    width: 100%;
+    height: 40px;
+    margin-top: 3px;
+    margin-bottom:3px;
+    font-size: 25px;
+    background-color:rgb(247, 247, 247);
+    border-radius:3px;
+    padding: 5px;
+    border-style:ridge;
+    font-family: 'Quicksand', sans-serif;
+    border:black 2.5px solid;
+}
+
+.mini_cuadritos {
+    text-align: center;
+    font-size: large;
+    font-family: 'Quicksand', sans-serif;
+    width: auto;
+    height: auto;
+   
+}
+
+.dia{
+    width:100%;
+    height: 70px;
+    text-align: center;
+    border-radius:2px;
+    border:black 2.5px solid;
+  
+
+}
+
+
+/*-------------------------
+estilo de cajitas 
+---------------------------*/
+
+
+#contelist{
+           
+    width: 170px;
+    height: 100px;
+    text-align: center;
+    padding-top:2%;
+    padding-left: 50%;
+
+  }
+
+  #list{
+     width: 800px;
+     height: auto;
+   }
+
+
+   .caja{
+     width: 300px;
+     height: 70px;
+     background:rgb(1, 68, 1) ;
+     margin-left: 10px;
+     margin-bottom: 10px;
+     margin-right: 10px;
+   }
+
+   
+
+

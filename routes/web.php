@@ -87,3 +87,8 @@ Route::get('/principal', function () {
     return view('menu.index');
 });
 
+
+
+Route::get('/horario' , function(){
+    return view('horarios.principal');
+});

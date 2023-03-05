@@ -4,13 +4,15 @@
     @section('titulo')
     <h3>Areas</h3>
 </div>
-@section('contenido_cuadritos')
+                
 
+@section('contenido_cuadritos')
+<div id="caja_central">
  
 	@foreach($muare as $re)
-                
-    <div id="caja_central"> 
-             <main id="background">
+ 
+  
+    <div class="background">
             <div class="texto_cuadritos">
                 <h1>{{$re->descripcion}}</h1> 
                 <h1>Ficha</h1>
@@ -35,12 +37,15 @@
                   </td>
                    </div>
                 </div>
-       
-            </main>
-        </div>
+            </div>
+ 
     @endforeach
-
 </div>
+
+
+
+
+
     <div id="agregarimg">
         <a href="{{route('crear_area')}}" ><img src="..\resources\img\agregar.png" alt="icono de agregar"></a>
     </div>

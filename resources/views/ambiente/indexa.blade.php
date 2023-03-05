@@ -8,7 +8,7 @@
 <div id="caja_central">  
 	@foreach($info as $e)
             
-            <div class="cuadritos">   
+    <div class="background"> 
                 <div class="texto_cuadritos">
                     <h1>{{$e->id_ambiente}}</h1> 
                     <h1>{{$e->id_area}}</h1> 
@@ -40,7 +40,7 @@
        
     @endforeach
 </div>
-</div>
+
 
 
         <div id="agregarimg">

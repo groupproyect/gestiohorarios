@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('inicial_titulo')</title>
+
 </head>
 
   <body>
@@ -33,9 +34,10 @@
         margin-top:25px;
         font-family: 'Quicksand', sans-serif;
          text-align: center;
-         text-decoration: none;
+      
          color:black;
          font-size: 45px;
+   
        }
        #caja_central {
         width:auto;
@@ -45,10 +47,12 @@
         margin-right: 10px;
        /* background-color: blue;*/
        }
-       #caja_central .main {
+      
+      
+      .background {
           height: auto;
           width: auto;
-          transition: background 2s;
+      transition: background 6s;
           display: inline-flex;
           /*flex-direction: column;
           align-items: center;
@@ -60,6 +64,7 @@
           margin-right:70px;
           border-radius:30px;
           border: 3px solid #0201016e;
+   
         }
        /*.cuadritos
         { 
@@ -83,10 +88,8 @@
           width:auto;
           height:auto;
           font-size: 25px;
-          color: white;
+          color:white;
           text-align: center;
-       
-    
         }
 
         #agregarimg{
@@ -101,54 +104,53 @@
         #editarimg{
           width: auto;
           height: auto;
-        margin-bottom: 10px;
+          margin-bottom: 10px;
         /*margin-top: -72px;*/
          /*margin-left: -15px;*/
-         background-color:#2d6e46;
+          background-color:none;
     
         
         }
 
         #editarimg .editarimg1{
-        width: 150px;
-        height: 100px;
-        margin-top: 32px;
+          width: 150px;
+          height: 100px;
+          margin-top: 32px;
         /* margin-left: -15px;*/
-         background-color:#2d6e46;
+         background-color:none;
         
         }
 
         #papeleraimg{
           width: auto;
           height: auto;
-        margin-bottom: -10px;
-        margin-top: -5px;
-         margin-left: 150px;
+          margin-bottom: -10px;
+          margin-top: -5px;
+          margin-left: 150px;
 
         }
 
         #papeleraimg .papeleraimg1{
           margin-top: -50px;
-        width:auto;
-        height: auto;
-  
+          width:auto;
+          height: auto;
+    
         }
 
         .boton{
-          background-color: #2d6e46;
+          background-color: transparent;
           padding-top: 1px;
           width: auto;
-        height: auto;
-        border: none;
-        margin-top: -50px;
+          height: auto;
+          border: none;
+          margin-top: -60px;
         }
 
         .boton img{
-          background-color:#2d6e46;
-        
+          background-color:none;
           width:125px;
-        height:125px;
-        padding-bottom: 4px;
+          height:125px;
+          padding-bottom: 4px;
        
         }
       </style>

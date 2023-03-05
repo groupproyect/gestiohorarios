@@ -1,21 +1,28 @@
-const background = document.getElementById("background");
 
-const getRandomNumber = (limit) => {
-  return Math.floor(Math.random() * limit);
-};
-const getRandomColor = () => {
-  const h = getRandomNumber(139);
-  return `hsl(${h}deg, 42%, 50%)`;
-};
+ const cambio_color = document.querySelectorAll(".background");
 
-const setBackgroundColor = () => {
-  const randomColor = getRandomColor();
-  background.style.backgroundColor = randomColor;
-  background.style.color = randomColor;
-};
+  cambio_color.forEach(background => {
+    
+    const getRandomNumber = (limit) => {
+      return Math.floor(Math.random() * limit);
+    };
 
-setBackgroundColor();
+    const getRandomColor = () => {
+      const h = getRandomNumber(231);
+      return `hsl(${h}deg, 47%, 50%)`;
+    };
 
-setInterval(() => {
-  setBackgroundColor();
-}, 500);
+    const setBackgroundColor = () => {
+      const randomColor = getRandomColor();
+      background.style.backgroundColor = randomColor;
+
+    };
+
+    setBackgroundColor();
+
+    setInterval(() => {
+      setBackgroundColor();
+    }, 800);
+
+  });
+

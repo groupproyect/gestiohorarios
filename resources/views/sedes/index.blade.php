@@ -9,7 +9,7 @@
 <div id="caja_central">  
 	@foreach($sed as $s)
                 
-        <div class="cuadritos">   
+    <div class="background">  
             <div class="texto_cuadritos">
                 <h1>{{$s->nombre_sede}}</h1> 
                 <h1>{{$s->direccion}}</h1> 
