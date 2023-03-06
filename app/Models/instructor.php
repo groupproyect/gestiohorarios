@@ -5,13 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class area extends Model
+class instructor extends Model
 {
     use HasFactory;
     public $timestamps = false;
     protected $fillable = [
-        'descripcion',
+        'id_area',
+        'num_doc',
+        'lider',
+        'cant_momentos',
+        'finalizacion_contrato',
+        'id_contrato',
         'estado'
     ];
-
 }

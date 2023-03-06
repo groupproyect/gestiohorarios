@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('semaforo_competencias', function (Blueprint $table) {
-            $table->id();
-            $table->integer('id_semaforo');
-            $table->integer('cod_competencia');
-           
+        Schema::create('personas', function (Blueprint $table) {
+            $table->char('num_doc',10)->primary();
+            $table->string('nombres');
+            $table->string('apellidos');
+            $table->string('correo');
         });
     }
 
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('semaforo_competencias');
+        Schema::dropIfExists('personas');
     }
 };

@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('rap_semaforos', function (Blueprint $table) {
+        Schema::create('raps', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_rap'); 
-            $table->integer('id_semaforo');
+            $table->mediumText('descripcion');
+            $table->foreignId('cod_competencia')->onUpdate('cascade')->onDelete('cascade')->constrained('competencias');
+
         });
     }
 
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rap_semaforos');
+        Schema::dropIfExists('raps');
     }
 };

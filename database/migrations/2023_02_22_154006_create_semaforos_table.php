@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('competencias', function (Blueprint $table) {
+        Schema::create('semaforos', function (Blueprint $table) {
             $table->id();
-            $table->string('descripcion_comp');
-            $table->string('codigo_prog' );
-            
+            $table->string('num_trimestre');
+            $table->boolean('cadena_formacion')->default(false);
+          
         });
     }
 
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('competencias');
+        Schema::dropIfExists('semaforos');
     }
 };

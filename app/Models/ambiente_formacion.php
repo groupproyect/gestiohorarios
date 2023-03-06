@@ -14,6 +14,7 @@ class ambiente_formacion extends Model
         'id_ambiente',
         'id_area',
         'aforo',
-        'id_sede'
+        'id_sede',
+        'estado'
     ];
 }

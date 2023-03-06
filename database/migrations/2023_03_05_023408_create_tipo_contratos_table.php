@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('areas', function (Blueprint $table) {
+        Schema::create('tipo_contratos', function (Blueprint $table) {
             $table->id();
             $table->string('descripcion');
-            
+            $table->integer('cant_momentos');
         });
     }
 
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('areas');
+        Schema::dropIfExists('tipo_contratos');
     }
 };
