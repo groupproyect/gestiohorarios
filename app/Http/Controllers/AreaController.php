@@ -30,7 +30,7 @@ class AreaController extends Controller
         //$cod = "'guardar'";
         //return $cod;
         $cod = route('guardar_area');
-        $titulo = 'Creacion Area';
+        $titulo = 'Creación Area';
         return view('area.createare',['cod'=>$cod,'titulo'=>$titulo]);
     }
 
@@ -42,7 +42,20 @@ class AreaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //VALIDACION 
+
+        $request->validate([
+        
+            'descripcion' => 'required | alpha| unique:areas '
+        ],
+        [
+          'descripcion.required' =>'El campo no puede estar vacio', 
+          'descripcion.unique' =>'Esta area ya existe',
+          'descripcion.alpha' =>'Utilice caracteres alfabeticos' 
+          ]
+
+        );
+      
         $area=new area();
         $area->id=$request->id;
         $area->descripcion=$request->descripcion;

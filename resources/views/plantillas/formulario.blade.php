@@ -77,10 +77,12 @@
 
         .contenedor1 h4{
         font-family: 'Quicksand', sans-serif;
+        margin-top: 25px;
         }
 
         .contenedor1 h5{
         font-family: 'Quicksand', sans-serif;
+      
         }
 
         .contenedor1 h2 {
@@ -89,7 +91,7 @@
         color:black;
         font-size: 24px;
         padding: 0 30px 15px;
-        border-bottom: 2px solid #00ab41;
+        border-bottom: 4px solid #00ab41;
         margin: 0;
         font-family: 'Quicksand', sans-serif;
         }
@@ -119,6 +121,7 @@
         width: 125px;
         text-align: right;
         padding-right: 25px;
+
         }
 
         .contenedor1 input {
@@ -127,7 +130,8 @@
         width: 230px;
         box-shadow: 1px 2px 4px 0 #2b5329;
         padding: 12px 18px;
-        border: 1px solid #00ab41;
+        border: 2px solid #00ab41;
+        margin-top:30px;
         }
 
         .contenedor1 input[type=button],
@@ -142,6 +146,7 @@
         border: 0;
         font-family: 'Quicksand', sans-serif;
         margin: 55px auto 0;
+        margin-top:40px;
         cursor: pointer;
         }
 

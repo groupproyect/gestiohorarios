@@ -38,6 +38,23 @@ class SedeController extends Controller
      */
     public function store(Request $request)
     {
+
+         //VALIDACION 
+
+         $request->validate([
+            'nombre_sede' => 'required | alpha| unique:sedes',
+            'direccion' => 'required | unique:sedes'
+        ],
+        [
+          'nombre_sede.required' =>'El campo no puede estar vacio', 
+          'nombre_sede.unique' =>'Esta sede ya existe',
+          'nombre_sede.alpha' =>'Utilice caracteres alfabeticos' ,
+          'direccion.required' =>'El campo no puede estar vacio', 
+          'direccion.unique' =>'Esta direccion ya existe'
+          ]
+
+        );
+
         $s=new sede();
         $s->nombre_sede=$request->nombre_sede;
         $s->direccion=$request->direccion;

@@ -54,6 +54,24 @@ class AmbienteFormacionController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'id_ambiente' => 'required | numeric| unique:ambiente_formacions',
+            'id_area' => 'required',
+            'aforo' => 'required | numeric',
+            'id_sede' => 'required',
+
+        ],
+        [
+          'id_ambiente.required' =>'El campo no puede estar vacio', 
+          'id_ambiente.unique' =>'Este ambiente ya existe',
+          'id_ambiente.numeric' =>'Utilice caracteres numericos' ,
+          'id_area.required' =>'Seleccione una opción', 
+          'aforo.required' =>'El campo no puede estar vacio', 
+          'aforo.numeric' =>'Utilice caracteres numericos',
+          'id_sede.required' =>'Seleccione una opción',
+          ]
+
+        );
         $nuevo2=new ambiente_formacion();
         $nuevo2->id_ambiente=$request->id_ambiente;
         $nuevo2->id_area=$request->id_area;
