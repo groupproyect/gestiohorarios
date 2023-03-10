@@ -13,12 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('sedes', function (Blueprint $table) {
+        Schema::create('red_tematicas', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre_sede',80);
-            $table->string('direccion');
-            $table->boolean('estado')->default(true);
-          
+            $table->string('descripcion');
         });
     }
 
@@ -29,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sedes');
+        Schema::dropIfExists('red_tematicas');
     }
 };

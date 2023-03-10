@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\semoforo;
+use App\Models\instructor;
 use Illuminate\Http\Request;
 
-class SemoforoController extends Controller
+class InstructorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class SemoforoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\semoforo  $semoforo
+     * @param  \App\Models\instructor  $instructor
      * @return \Illuminate\Http\Response
      */
-    public function show(semoforo $semoforo)
+    public function show(instructor $instructor)
     {
         //
     }
@@ -52,10 +52,10 @@ class SemoforoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\semoforo  $semoforo
+     * @param  \App\Models\instructor  $instructor
      * @return \Illuminate\Http\Response
      */
-    public function edit(semoforo $semoforo)
+    public function edit(instructor $instructor)
     {
         //
     }
@@ -64,10 +64,10 @@ class SemoforoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\semoforo  $semoforo
+     * @param  \App\Models\instructor  $instructor
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, semoforo $semoforo)
+    public function update(Request $request, instructor $instructor)
     {
         //
     }
@@ -75,10 +75,10 @@ class SemoforoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\semoforo  $semoforo
+     * @param  \App\Models\instructor  $instructor
      * @return \Illuminate\Http\Response
      */
-    public function destroy(semoforo $semoforo)
+    public function destroy(instructor $instructor)
     {
         //
     }

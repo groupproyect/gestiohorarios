@@ -10,7 +10,7 @@ class competencia extends Model
     use HasFactory;
     public $timestamps = false;
     protected $fillable = [
-        'descripcion_comp',
+        'descripcion',
         'codigo_prog'
     ];
 }

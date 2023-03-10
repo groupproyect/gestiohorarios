@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('sedes', function (Blueprint $table) {
+        Schema::create('rap_semaforos', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre_sede',80);
-            $table->string('direccion');
-            $table->boolean('estado')->default(true);
-          
+            $table->foreignId('id_rap')->onUpdate('cascade')->onDelete('cascade')->constrained('raps');
+            $table->foreignId('id_semaforo')->onUpdate('cascade')->onDelete('cascade')->constrained('semaforos');
+
+
         });
     }
 
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sedes');
+        Schema::dropIfExists('rap_semaforos');
     }
 };

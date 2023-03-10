@@ -8,10 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class programa_formacion extends Model
 {
     use HasFactory;
+    protected $primarykey = 'codigo_prog';
     public $timestamps = false; 
-
     protected $fillable =[ 
-        'direccion',
-        'nombre_sede' 
+        'nombre',
+        'version',
+        'duracion',
+        'id_niv_formacion',
+        'estado',
+        'id_area' 
     ];
 }

@@ -13,11 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('semoforos', function (Blueprint $table) {
+        Schema::create('competencias', function (Blueprint $table) {
             $table->id();
-            $table->string('num_trimestre');
-            $table->boolean('cadena_formacion');
-          
+            $table->string('descripcion');
+            $table->string('codigo_prog');
+            $table->foreign('codigo_prog')->references('codigo_prog')->on('programa_formacions')->onUpdate('cascade')->onDelete('cascade');
+
         });
     }
 
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('semoforos');
+        Schema::dropIfExists('competencias');
     }
 };

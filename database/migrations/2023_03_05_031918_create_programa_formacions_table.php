@@ -14,14 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('programa_formacions', function (Blueprint $table) {
-            $table->string('codigo_prog' , 20)->primary();
-            $table->string('nombre_prog');
+            $table->string('codigo_prog')->primary();
+            $table->string('nombre');
             $table->string('version');
             $table->string('duracion');
-            $table->boolean('estado');
-            $table->string('id_area');
-            $table->string('id_nivel_formacion');
-           
+            $table->boolean('estado')->default(true);
+            $table->foreignId('id_area')->onUpdate('cascade')->onDelete('cascade')->constrained('areas');
+            $table->foreignId('id_niv_formacion')->onUpdate('cascade')->restrictOnDelete()->constrained('nivel_formacions');
+
         });
     }
 
