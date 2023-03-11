@@ -11,7 +11,7 @@
 <body>
   
 <div class="cajita_fondo" boder="2"style="text-align: center;">
-  <table class="deaufult"  style="height: 20px;" >
+  <table class="deaufult"  style=" margin-left:60px; height: 20px;" >
   
     <colgroup spna="6">
       <col style="width: 16.67%;">

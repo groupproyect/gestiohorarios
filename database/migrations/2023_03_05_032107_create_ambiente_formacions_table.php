@@ -14,12 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('ambiente_formacions', function (Blueprint $table) {
-            $table->string('id_ambiente')->primary();
             $table->integer('aforo');
-            $table->boolean('estado')->default(true);
+            $table->string('id_ambiente',3)->primary();
             $table->foreignId('id_area')->onUpdate('cascade')->onDelete('cascade')->constrained('areas');
             $table->foreignId('id_sede')->onUpdate('cascade')->onDelete('cascade')->constrained('sedes');
-
         });
     }
 

@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Controllers\RedTematicaController;
 use App\Models\area;
+use App\Models\red_tematica;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 class AreaController extends Controller
@@ -27,11 +28,12 @@ class AreaController extends Controller
      */
     public function create()
     {
-        //$cod = "'guardar'";
-        //return $cod;
+       
+        $redtematica = new RedTematicaController;
+        $list_redtematica = $redtematica->mostrarRedtematica();
         $cod = route('guardar_area');
         $titulo = 'Creación Area';
-        return view('area.createare',['cod'=>$cod,'titulo'=>$titulo]);
+        return view('area.createare',['redtematica'=>$list_redtematica,'cod'=>$cod,'titulo'=>$titulo]);
     }
 
     /**
@@ -46,7 +48,7 @@ class AreaController extends Controller
 
         $request->validate([
         
-            'descripcion' => 'required | alpha| unique:areas '
+            'descripcion' => 'required | alpha| unique:areas'
         ],
         [
           'descripcion.required' =>'El campo no puede estar vacio', 
@@ -57,7 +59,7 @@ class AreaController extends Controller
         );
       
         $area=new area();
-        $area->id=$request->id;
+        $area->id_red=$request->id;
         $area->descripcion=$request->descripcion;
         $area->save();
 

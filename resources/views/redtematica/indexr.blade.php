@@ -1,22 +1,22 @@
 @extends("../plantillas/areas")
-@section('inicial_titulo','Sedes')
+@section('inicial_titulo','Red Tematica')
 @section('titulo')
 <div id="titulo">       
     @section('titulo')
-    <h3>Sedes</h3>
+    <h3>Red Tematica</h3>
 </div>
 @section('contenido_cuadritos')
 <div id="caja_central">  
-	@foreach($sed as $s)
+	@foreach($rtm as $r)
                 
     <div class="background">  
             <div class="texto_cuadritos">
-                <h1>{{$s->nombre_sede}}</h1> 
-                <h1>{{$s->direccion}}</h1> 
+                <h1>{{$r->descripcion}}</h1> 
+               
           
                 <div id="editarimg">
                     <div class="editarimg1">
-                        <a href="{{route('editar_sede',$s->id)}}">
+                        <a href="{{route('editar_redtematica',$r->id)}}">
                             <img src="..\resources\img\editar.png" alt="icono de editar">
                         </a>
                     </div> 
@@ -24,7 +24,7 @@
                 <div id="papeleraimg">
                      <div class="papeleraimg1">
                      <td>
-                     <form action="{{route('eliminar_sede', $s->id)}}" method="POST">
+                     <form action="{{route('eliminar_redtematica', $r->id)}}" method="POST">
                         @csrf
                        @method('delete')
 
@@ -43,7 +43,7 @@
 </div>
 
         <div id="agregarimg">
-            <a href="{{route('crear_sede')}}"><img src="..\resources\img\agregar.png" alt="icono de agregar"></a>
+            <a href="{{route('crear_redtematica')}}"><img src="..\resources\img\agregar.png" alt="icono de agregar"></a>
     
         </div>
         

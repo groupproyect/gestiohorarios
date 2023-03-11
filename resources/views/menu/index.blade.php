@@ -21,23 +21,29 @@
 						<img src="" alt="">
                 <span class="mif-clipboard mif-lg"></span>
                         Registro
-                         <span class="mif-chevron-right mif-lg"></span>
+                       
 					</label>
 					<ul>
 						<li><a href="{{route('mostrar_sedes')}}" target="principal">Sedes</a></li>
+						<li><a href="{{route('mostrar_redtematica')}}" target="principal" >Red Tematica</a></li>
 						<li><a href="{{route('mostrar_ambientes')}}"  target="principal" >Ambientes</a></li>
 						<li><a href="{{route('mostrar_areas')}}" target="principal" >Areas</a></li>
+						
 					</ul>
 				</li>
 
 
 				<li>
-					<label for="drop-2">
-                        <span class="mif-pencil mif-lg"></span>
-						Programa_horario
-					</label>
+
+			
+				
+				
+				<a href="{{route('horario')}}" target="principal"><span class="mif-pencil mif-lg"></span> Crear Horario</a>
+		
+				
                     <li><a href=""><span class="mif-user-plus mif-lg"></span> Asignacion rol</a></li>
                     <li><a href=""><span class="mif-history mif-lg"></span> Historial</a></li>
+				</li>
 
 			</ul>
 		</nav>

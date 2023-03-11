@@ -23,7 +23,6 @@
                         
         
             <label>
-
                 <h4>Area</h4>
                 <select class="form-control @error('id_area') is-invalid @enderror" name="id_area" id="">
                     <option disabled selected>Seleccione</option> 

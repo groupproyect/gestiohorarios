@@ -11,7 +11,7 @@ class area extends Model
     public $timestamps = false;
     protected $fillable = [
         'descripcion',
-        'estado'
+        'id_red'
     ];
 
 }
