@@ -33,9 +33,15 @@ class PersonaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store($request)
     {
-        //
+        $nuevo = new persona();
+        $nuevo->nombres = $request->nombre_instructor;
+        $nuevo->nombres = $request->apellido_instructor;
+        $nuevo->nombres = $request->nombre_instructor;
+        $nuevo->nombres = $request->correo_instructor;
+        $nuevo->nombres = $request->num_doc;
+        $nuevo2->save();
     }
 
     /**
@@ -81,5 +87,10 @@ class PersonaController extends Controller
     public function destroy(persona $persona)
     {
         //
+    }
+    public function mostrar_person($id){
+        $persona = persona::where('num_doc','=',$id)->get();
+        $dato = $persona[0];
+        return $dato;
     }
 }

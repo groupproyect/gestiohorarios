@@ -40,7 +40,7 @@ class AmbienteFormacionController extends Controller
         $list_areas = $area->mostrarAreas();
 
         $cod = route('guardar_ambiente');
-        $titulo = "creacion ambiente";
+        $titulo = "Creacion Ambiente";
 
 
         return view('ambiente.createa',['sedes'=>$list_sedes,'areas'=>$list_areas,'cod'=>$cod,'titulo'=>$titulo]);

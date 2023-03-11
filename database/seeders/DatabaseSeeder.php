@@ -8,7 +8,11 @@ use App\Models\area;
 use App\Models\ficha;
 use App\Models\ambiente_formacion;
 use App\Models\red_tematica;
+use App\Models\tipo_contrato;
+use App\Models\nivel_formacion;
+use App\Models\jornada;
 use Illuminate\Database\Seeder;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -64,48 +68,40 @@ class DatabaseSeeder extends Seeder
             ]]
         
         );
-        // ambiente_formacion::insert([
-        //     [
-        //         'aforo'=>'25',
-        //      'id_ambiente'=>'205',
-        //      'id_area'=>'1',
-            
-        //      'id_sede'=>'01'
+        
+        tipo_contrato::insert([
+            [
+                'descripcion' => 'planta',
+                'cant_momentos' => '6'
+            ],
+            [
+                'descripcion' => 'contrato',
+                'cant_momentos' => '8'
+            ]
+        ]);
 
-        //     ],
-        //     [
-        //          'aforo'=>'20',
-        //         'id_ambiente'=>'101',
-        //         'id_area'=>'1',
-               
-        //         'id_sede'=>'01'
+        nivel_formacion::insert(
+            [
+                [
+                    'descripcion' => 'tecnologo'
+                ],
+                [
+                    'descripcion' => 'tecnico'
+                ]
+            ]
+        );
 
-        //     ],
-        //     [
-        //           'aforo'=>'25',
-        //         'id_ambiente'=>'201',
-        //         'id_area'=>'1',
-              
-        //         'id_sede'=>'01'
-        //     ],
-        //    ]
-        //     );
-    //       area::insert([
-    //            'descripcion'=>'software'
-    //       ]);
-
-          
-    //       ficha::insert([
-    //         'num_ficha'=>'2515397',
-    //         ' cant_aprend'=>'25',
-    //          'cadena_formacion'=>'true',
-    //          'trismestre'=>'4',
-    //          'inicio_formacion'=>'software',
-    //          'fin_formacion'=>'software',
-    //          'estado'=>'tru',
-    //          'id_jornada'=>'1',
-    //          'codigo_prog'=>'software'
-    //    ]);
+        jornada::insert(
+            [
+                [
+                    'descripcion' => 'mañana'
+                ],
+                [
+                    'descripcion' => 'tarde'
+                ]
+            ]
+        );
+        
          
      
     }

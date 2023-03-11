@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\instructor;
+use App\Http\Controllers\AreaController as AreaController;
+use App\Http\Controllers\TipoContratoController as tipoContrato;
 use Illuminate\Http\Request;
 
 class InstructorController extends Controller
@@ -24,7 +26,17 @@ class InstructorController extends Controller
      */
     public function create()
     {
-        //
+        $area = new AreaController;
+        $list_areas = $area->mostrarAreas();
+
+        $contrato = new tipoContrato;
+        $list_contrats = $contrato->mostrarContratos();
+
+        $cod = route('guardar_instructor');
+        $titulo = "Creacion Instructor";
+
+        return view('instructor.registroinstru',['areas'=>$list_areas, 'contratos'=>$list_contrats,'titulo'=>$titulo, 'cod'=>$cod]);
+
     }
 
     /**

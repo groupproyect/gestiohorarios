@@ -6,6 +6,8 @@ use App\Http\Controllers\registroinstruController;
 use App\Http\Controllers\SedeController;
 use App\Http\Controllers\AmbienteFormacionController;
 use App\Http\Controllers\RedTematicaController;
+use App\Http\Controllers\PersonaController;
+use App\Http\Controllers\InstructorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -77,8 +79,12 @@ Route::post('redtematica/actualizar_redtematica',[RedTematicaController::class,'
 
  Route::delete('/redtematica/delete/{r}',  [RedTematicaController::class, 'destroy'])->name('eliminar_redtematica');
 
+/*-------------------------------------------------------
+RUTAS DE INSTRUCTOR
+--------------------------------------------------------*/
 
-
+Route::match(['get','post'],'/instructor/crear', [InstructorController::class,'create'] )->name('crear_instructor');
+Route::match(['get','post'],'/ambientes/crear', [InstructorController::class,'store'] )->name('guardar_instructor');
 /*-------------------------------------------------------
 RUTAS ADICIONALES
 --------------------------------------------------------*/
@@ -97,4 +103,4 @@ Route::get('/principal', function () {
 
 
 Route::get('/horario' , function(){ return view('horarios.principal');})->name('horario');
-
+Route::get('/prueba/persona' , [PersonaController::class,'mostrar_person']);

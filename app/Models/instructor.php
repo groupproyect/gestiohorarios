@@ -15,7 +15,6 @@ class instructor extends Model
         'lider',
         'cant_momentos',
         'finalizacion_contrato',
-        'id_contrato',
-        'estado'
+        'id_contrato'
     ];
 }
