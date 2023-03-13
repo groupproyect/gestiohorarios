@@ -8,6 +8,7 @@ use App\Http\Controllers\AmbienteFormacionController;
 use App\Http\Controllers\RedTematicaController;
 use App\Http\Controllers\PersonaController;
 use App\Http\Controllers\InstructorController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -99,6 +100,11 @@ Route::get('/registroambiente',[SedeController::class,'sede_ambiente']);
 Route::get('/principal', function () {
     return view('menu.index');
 });
+/*-------------------------------------------------------
+RUTA DE INICIO DE SESION
+--------------------------------------------------------*/
+Route::match(['get','post'],'/iniciosesion/crear' ,[UserController::class,'create'])->name('iniciosesion_cre');
+Route::post('/iniciosesion/guardar', [UserController::class, 'store'])->name('guardar_iniciosesion');
 
 
 

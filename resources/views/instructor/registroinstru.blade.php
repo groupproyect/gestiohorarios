@@ -41,15 +41,7 @@
                     </span>
                     @enderror
                 </label>
-                <label>
-                    <h4>Nombre_instructor </h4> 
-                    <input type="text" class="form-control @error('nombre_instructor') is-invalid @enderror" name="nombre_instructor" value="{{ old('nombre_instructor') }}">
-                    @error('nombre_instructor')
-                    <span class="invalid-feedback">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                </label>
+              
             <br>
                 <label>
 
