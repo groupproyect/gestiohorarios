@@ -1,18 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+
+	font-family: "LeJeuneDeck-Regular", Times, serif; 
 }
 
-html{font-family: 'Quicksand', sans-serif;
+html{  font-family: "LeJeuneDeck-Regular", Times, serif; 
 	font-size: 16px;
-    background-color: #ffffff;
+	background-color:#e1ddbf;
+
     margin-top: 20px;
+	
 }
 
 li > ul {
@@ -53,6 +55,7 @@ ul{
 
 #menu_principal a, label{
 	color: #ffffff;
+	
 	display: block;
 	padding-left: 25px;
 	text-decoration: none;
@@ -80,8 +83,10 @@ ul{
 	color: #020202;
 	cursor: pointer;
     border-radius: 10px;
-	background-color: rgb(212, 210, 210);
+	background-color:#e1ddbf;
+
     text-align: center;
+	font-family: "LeJeuneDeck-Regular", Times, serif; 
 }
 
 nav ul li:hover > ul {
@@ -93,8 +98,6 @@ nav ul li:hover > ul {
 	overflow: visible;
 	padding-top: 50%;
 	margin-left: 20px;
-	/*background-color: aqua;*/
-	
 
 }
 
@@ -110,7 +113,7 @@ nav ul li:hover > ul {
 	float: left;
 	margin-bottom: 2px;
 	
-	/*background-color: beige;*/
+	background-color:#e1ddbf;
 }
 
 

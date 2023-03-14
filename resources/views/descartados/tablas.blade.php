@@ -11,9 +11,7 @@
       
       <style>
 
-        @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+      
         
         body{
            background-image: url('https://i.pinimg.com/564x/e8/ba/c0/e8bac0f73fa5b7ae697857faaaf57d5c.jpg');
@@ -34,7 +32,7 @@
         border: 1px solid #000;
         height: 30%;
         font-size: 23px;
-        font-family:'Quicksand',sans-serif;
+        font-family: "LeJeuneDeck-Regular", Times, serif; 
  
         }
         thead {
