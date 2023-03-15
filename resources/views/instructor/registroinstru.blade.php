@@ -10,10 +10,21 @@
     <form action="{{$cod}}" method="post" >
 
         @csrf
-        @if(empty($informacion_instru))
+        @if(empty($informacion))
+                <label>
+                    <h4>Numero de documento</h4> 
+                    <input type="text" class="form-control @error('num_doc') is-invalid @enderror" name="num_doc" value="{{ old('num_doc') }}">
+                    @error('num_doc')
+                    <span class="invalid-feedback">
+                         <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </label>
+               
+            <br>
         <br>
             <label>
-                <h4>Nombre_instructor </h4> 
+                <h4>Nombres del instructor </h4> 
                 <input type="text" class="form-control @error('nombre_instructor') is-invalid @enderror" name="nombre_instructor" value="{{ old('nombre_instructor') }}">
               @error('nombre_instructor')
                  <span class="invalid-feedback">
@@ -23,7 +34,7 @@
             </label>
             <br>
             <label>
-                <h4>Apellido_instructor</h4> 
+                <h4>Apellidos del instructor</h4> 
                 <input type="text" class="form-control @error('apellido_instructor') is-invalid @enderror" name="apellido_instructor" value="{{ old('apellido_instructor') }}">
               @error('Apellido_instructor')
                  <span class="invalid-feedback">
@@ -31,26 +42,16 @@
                  </span>
                  @enderror
             </label>
-            <br>
-                <label>
-                    <h4>Numero de doc</h4> 
-                    <input type="text" class="form-control @error('num_doc') is-invalid @enderror" name="num_doc" value="{{ old('num_doc') }}">
-                    @error('num_doc')
-                    <span class="invalid-feedback">
-                         <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                </label>
-                <label>
-                    <h4>Nombre_instructor </h4> 
-                    <input type="text" class="form-control @error('nombre_instructor') is-invalid @enderror" name="nombre_instructor" value="{{ old('nombre_instructor') }}">
-                    @error('nombre_instructor')
-                    <span class="invalid-feedback">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                </label>
-            <br>
+            <label>
+                <h4>Correo del instructor </h4> 
+                <input type="text" class="form-control @error('nombre_instructor') is-invalid @enderror" name="correo" value="{{ old('correo') }}">
+              @error('nombre_instructor')
+                 <span class="invalid-feedback">
+                      <strong>{{ $message }}</strong>
+                 </span>
+                 @enderror
+            </label>
+
                 <label>
 
                     <h4>Area</h4>
