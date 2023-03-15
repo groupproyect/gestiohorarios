@@ -12,10 +12,7 @@
       
       <style>
 
-        @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
-        
+       
         /*body{
            background-image: url('https://i.pinimg.com/564x/e8/ba/c0/e8bac0f73fa5b7ae697857faaaf57d5c.jpg');
            background-attachment:fixed;
@@ -29,10 +26,13 @@
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-          }
+       background-color: #e1ddbf;
+      
+      }
         #titulo{
         margin-top:25px;
-        font-family: 'Quicksand', sans-serif;
+          
+        font-family: "LeJeuneDeck-Regular", Times, serif; 
          text-align: center;
       
          color:black;
@@ -87,9 +87,10 @@
           margin-right: 15px;
           width:auto;
           height:auto;
-          font-size: 25px;
+          font-size: 20px;
           color:white;
           text-align: center;
+          font-family: "Cormorant",Georgia,"Times New Roman",Times,serif;
         }
 
         #agregarimg{

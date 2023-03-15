@@ -9,9 +9,7 @@
 <body>
     <style>
 
-        @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+       
 
         /*body{
            background-image: url('https://i.pinimg.com/564x/e8/ba/c0/e8bac0f73fa5b7ae697857faaaf57d5c.jpg');
@@ -21,7 +19,9 @@
             /*background-repeat:unset;
             background-size:38% ; 
         }*/
-        
+        body{
+            background-color:#e1ddbf;
+        }
         .main-content {
         margin-left: 40%;
         margin-right: 40%;
@@ -35,7 +35,7 @@
         width: 100%;
         margin: 0 auto;
  
-        font-family: 'Quicksand', sans-serif;
+        font-family:"Founders Grotesk text Regular",Helvetica,Arial,sans-serif;
         text-align: center;
         }
 
@@ -76,12 +76,13 @@
         }
 
         .contenedor1 h4{
-        font-family: 'Quicksand', sans-serif;
+             
+        font-family: "LeJeuneDeck-Regular", Times, serif; 
         margin-top: 25px;
         }
 
         .contenedor1 h5{
-        font-family: 'Quicksand', sans-serif;
+        font-family: "Founders Grotesk text Regular",Helvetica,Arial,sans-serif;
       
         }
 
@@ -93,7 +94,7 @@
         padding: 0 30px 15px;
         border-bottom: 4px solid #00ab41;
         margin: 0;
-        font-family: 'Quicksand', sans-serif;
+        font-family: "LeJeuneDeck-Regular", Times, serif; 
         }
 
         .contenedor1 select {
@@ -110,7 +111,7 @@
         margin: 0;
         text-align: center;
         box-shadow: 1px 2px 4px 0 #2b5329;
-        font-family: 'Quicksand', sans-serif;
+        font-family: "Founders Grotesk text Regular",Helvetica,Arial,sans-serif;
         text-align: center;
         }
 
@@ -144,7 +145,7 @@
         box-shadow: 1px 2px 4px 0  #0e6b0e;
         padding: 15px 35px;
         border: 0;
-        font-family: 'Quicksand', sans-serif;
+        font-family: "LeJeuneDeck-Regular", Times, serif; 
         margin: 55px auto 0;
         margin-top:40px;
         cursor: pointer;
