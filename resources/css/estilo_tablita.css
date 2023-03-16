@@ -98,8 +98,16 @@ table tr:nth-child(even) td{
     text-align: center;
     border-radius:2px;
     border:white 1px solid;
-   
+}
 
+.drop{
+ 
+   text-align: center;
+    border-radius:2px;
+    width:160px;
+    height: 65px;
+   border: 1px  ;
+   
 }
 
 
