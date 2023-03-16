@@ -8,7 +8,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 @section('formulario')
     <form action="{{$cod}}" method="post" >
-
         @csrf
         @if(empty($inicio))
         <br>
@@ -42,22 +41,7 @@
                     @enderror
                 </label>
                 @else
-            @foreach($informacion_instru as $key)
-            <label>
-                <h4>Nombre</h4> 
-                <input type="text" name="name" placeholder="{{$key->name}}" value="{{$key->name}}" >
-            </label>
-            <br>
-                <label>
-                    <h4>Email</h4> 
-                    <input type="text" name="email" placeholder="{{$key->email}}" value="{{$key->email}}">
-                </label>
-            <br>
-            <label>
-                <h4>Contraseña</h4> 
-                <input type="text" name="password" placeholder="{{$key->password}}" value="{{$key->password}}" >
-            </label>
-            @endforeach
+        
       @endif
         <input type="submit" class="boton" name="enviar" value="Enviar">
     

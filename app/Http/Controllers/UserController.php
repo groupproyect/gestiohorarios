@@ -16,21 +16,21 @@ class UserController extends Controller
     }
     public function create()
     {
-        $cod = route('iniciosesion_cre');
+        $cod = route('guardar_iniciosesion');
         $titulo = 'Inicio sesion';
-        return view('inicio.inicio',['cod'=>$cod,'titulo'=>$titulo]);
+        return view ('Inicio.Inicio',['cod'=>$cod,'titulo'=>$titulo]);
     }
     public function store(Request $request){
 
     $request->validate([
-        'name' => 'required | alpha| unique:user',
-        'email' => 'required | alpha| unique:user',
-        'password' => 'required | alpha| unique:user',
+        'name' => 'required | alpha| unique:users',
+        'email' => 'required:users',
+        'password' => 'required:users',
       
     ],
     [
       'name.required' =>'El campo no puede estar vacio', 
-      'name.unique' =>'Esta red tematica ya existe',
+      'name.unique' =>'Esta nombre ya existe',
       'name.alpha' =>'Utilice caracteres alfabeticos' ,
       'email.required' =>'El campo no puede estar vacio', 
       'password.required' =>'El campo no puede estar vacio', 
@@ -39,11 +39,12 @@ class UserController extends Controller
 
     );
 
-    $ini=new user();
+    $ini=new User();
     $ini->name=$request->name;
     $ini->email=$request->email;
     $ini->password=$request->password;
     $ini->save();
-    return redirect()->route('horario');
+    // return redirect()->route('horario');
+    return $request;
     }
 }
