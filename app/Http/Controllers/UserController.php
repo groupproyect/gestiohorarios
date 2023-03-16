@@ -44,7 +44,7 @@ class UserController extends Controller
     $ini->email=$request->email;
     $ini->password=$request->password;
     $ini->save();
-    // return redirect()->route('horario');
-    return $request;
+    return redirect()->route('vista_menu');
+    //return $request;
     }
 }

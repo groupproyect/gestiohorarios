@@ -99,7 +99,7 @@ RUTAS X
 Route::get('/registroambiente',[SedeController::class,'sede_ambiente']);
 Route::get('/principal', function () {
     return view('menu.index');
-});
+})->name('vista_menu');
 /*-------------------------------------------------------
 RUTA DE INICIO DE SESION
 --------------------------------------------------------*/
