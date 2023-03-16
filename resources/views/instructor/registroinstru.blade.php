@@ -44,7 +44,7 @@
             </label>
             <label>
                 <h4>Correo del instructor </h4> 
-                <input type="text" class="form-control @error('nombre_instructor') is-invalid @enderror" name="correo" value="{{ old('correo') }}">
+                <input type="text" class="form-control @error('nombre_instructor') is-invalid @enderror" name="correo_instructor" value="{{ old('correo') }}">
               @error('nombre_instructor')
                  <span class="invalid-feedback">
                       <strong>{{ $message }}</strong>

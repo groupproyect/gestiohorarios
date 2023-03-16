@@ -82,4 +82,7 @@ class HorarioController extends Controller
     {
         //
     }
+    public function prueba(Request $request){
+        return $request;
+    }
 }

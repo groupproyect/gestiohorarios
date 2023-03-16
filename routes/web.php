@@ -104,3 +104,4 @@ Route::get('/principal', function () {
 
 Route::get('/horario' , function(){ return view('horarios.principal');})->name('horario');
 Route::get('/prueba/persona' , [PersonaController::class,'mostrar_person']);
+Route::match(['get','post'],'/horario/crear', [HorarioController::class,'prueba'] )->name('prueba_h');
