@@ -85,4 +85,11 @@ class HorarioController extends Controller
     public function prueba(Request $request){
         return $request;
     }
+
+    public function javascript(){
+        $js = "
+            window.alert('Bienvenido a nuestro sitio web');
+        ";
+        return view('horarios.prueba',['js' => $js]);
+    }
 }

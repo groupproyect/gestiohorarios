@@ -8,6 +8,7 @@ use App\Http\Controllers\AmbienteFormacionController;
 use App\Http\Controllers\RedTematicaController;
 use App\Http\Controllers\PersonaController;
 use App\Http\Controllers\InstructorController;
+use App\Http\Controllers\HorarioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -105,3 +106,5 @@ Route::get('/principal', function () {
 Route::get('/horario' , function(){ return view('horarios.principal');})->name('horario');
 Route::get('/prueba/persona' , [PersonaController::class,'mostrar_person']);
 Route::match(['get','post'],'/horario/crear', [HorarioController::class,'prueba'] )->name('prueba_h');
+
+Route::get('/prueba2/horario' , [HorarioController::class,'javascript']);
