@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
-        *
+*
 {
     padding: 0;
     margin: 0;
@@ -10,9 +7,13 @@
 body{
     width:100%;
 	height: 300px;
-    background-color: #ffffff;
+    background-color:#e1ddbf;
 }
 
+.cajita_fondo{
+    width:100%;
+   
+}
 table{
     border: 2.5px;
     width: 65%;
@@ -24,30 +25,46 @@ table{
     background-color:#b6b6b6;
     border-radius:8px;
     border-style:ridge;
-    font-family: 'Quicksand', sans-serif;
+    font-family: "LeJeuneDeck-Regular", Times, serif; 
 
 }
 table th{
     height:30px;
     width:30px;
-    background-color:#ffffff;
+    background-color:#20335e;
+    color:white;
     border-radius:3px;
     border-style:ridge;
-    border:black 2px solid;
-    font-family: 'Quicksand', sans-serif;
+    border:white 1px solid;
+    font-family: "LeJeuneDeck-Regular", Times, serif; 
+   
 
 }
 tr{
    padding-bottom:10px;
    padding-top:10px;
+  
+}
+table tr:nth-child(odd) td{
+    background-color:#20335e;
+    color: white;
+    font-family: "LeJeuneDeck-Regular", Times, serif; 
+}
+table tr:nth-child(even) td{
+    background-color:#07193e;
+    color: white;
+    font-family: "LeJeuneDeck-Regular", Times, serif; 
 }
 
+
+
+ 
 .jornada{
     height: 80px;
     align-content: center;
     font-size: 30px;
-    font-family: 'Quicksand', sans-serif;
-    
+    font-family: "LeJeuneDeck-Regular", Times, serif; 
+  
 }
 
 .sub_jornada{
@@ -56,18 +73,20 @@ tr{
     margin-top: 3px;
     margin-bottom:3px;
     font-size: 25px;
-    background-color:rgb(247, 247, 247);
-    border-radius:3px;
+    background-color:#20335e;
+    color:white;
+    /* border-radius:3px; */
     padding: 5px;
-    border-style:ridge;
-    font-family: 'Quicksand', sans-serif;
-    border:black 2.5px solid;
+    /* border-style:ridge;
+    border-color: greenyellow; */
+    font-family: "LeJeuneDeck-Regular", Times, serif; 
+
 }
 
 .mini_cuadritos {
     text-align: center;
     font-size: large;
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Cormorant",Georgia,"Times New Roman",Times,serif;
     width: auto;
     height: auto;
    
@@ -78,8 +97,8 @@ tr{
     height: 70px;
     text-align: center;
     border-radius:2px;
-    border:black 2.5px solid;
-  
+    border:white 1px solid;
+   
 
 }
 
@@ -99,21 +118,17 @@ estilo de cajitas
 
   }
 
-  #list{
+  .list{
      width: 800px;
      height: auto;
+
+  
    }
 
 
-   .caja{
-     width: 300px;
-     height: 70px;
-     background:rgb(1, 68, 1) ;
-     margin-left: 10px;
-     margin-bottom: 10px;
-     margin-right: 10px;
-   }
 
+
+ 
    
 
 
