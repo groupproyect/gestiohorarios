@@ -1,0 +1,134 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width:100%;
+	height: 300px;
+    background-color:#e1ddbf;
+}
+
+.cajita_fondo{
+    width:100%;
+   
+}
+table{
+    border: 2.5px;
+    width: 65%;
+    height: 500%;
+    margin-left: 20%;
+    margin-top:2%;
+    margin-right:20%;
+    /*padding: 45px 450px 20px 450px;*/
+    background-color:#b6b6b6;
+    border-radius:8px;
+    border-style:ridge;
+    font-family: "LeJeuneDeck-Regular", Times, serif; 
+
+}
+table th{
+    height:30px;
+    width:30px;
+    background-color:#20335e;
+    color:white;
+    border-radius:3px;
+    border-style:ridge;
+    border:white 1px solid;
+    font-family: "LeJeuneDeck-Regular", Times, serif; 
+   
+
+}
+tr{
+   padding-bottom:10px;
+   padding-top:10px;
+  
+}
+table tr:nth-child(odd) td{
+    background-color:#20335e;
+    color: white;
+    font-family: "LeJeuneDeck-Regular", Times, serif; 
+}
+table tr:nth-child(even) td{
+    background-color:#07193e;
+    color: white;
+    font-family: "LeJeuneDeck-Regular", Times, serif; 
+}
+
+
+
+ 
+.jornada{
+    height: 80px;
+    align-content: center;
+    font-size: 30px;
+    font-family: "LeJeuneDeck-Regular", Times, serif; 
+  
+}
+
+.sub_jornada{
+    width: 100%;
+    height: 40px;
+    margin-top: 3px;
+    margin-bottom:3px;
+    font-size: 25px;
+    background-color:#20335e;
+    color:white;
+    /* border-radius:3px; */
+    padding: 5px;
+    /* border-style:ridge;
+    border-color: greenyellow; */
+    font-family: "LeJeuneDeck-Regular", Times, serif; 
+
+}
+
+.mini_cuadritos {
+    text-align: center;
+    font-size: large;
+    font-family: "Cormorant",Georgia,"Times New Roman",Times,serif;
+    width: auto;
+    height: auto;
+   
+}
+
+.dia{
+    width:100%;
+    height: 70px;
+    text-align: center;
+    border-radius:2px;
+    border:white 1px solid;
+   
+
+}
+
+
+/*-------------------------
+estilo de cajitas 
+---------------------------*/
+
+
+#contelist{
+           
+    width: 170px;
+    height: 100px;
+    text-align: center;
+    padding-top:2%;
+    padding-left: 50%;
+
+  }
+
+  .list{
+     width: 800px;
+     height: auto;
+
+  
+   }
+
+
+
+
+ 
+   
+
+
