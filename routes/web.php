@@ -8,7 +8,11 @@ use App\Http\Controllers\AmbienteFormacionController;
 use App\Http\Controllers\RedTematicaController;
 use App\Http\Controllers\PersonaController;
 use App\Http\Controllers\InstructorController;
+<<<<<<< HEAD
 use App\Http\Controllers\HorarioController;
+=======
+use App\Http\Controllers\UserController;
+>>>>>>> laura
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -83,7 +87,7 @@ Route::post('redtematica/actualizar_redtematica',[RedTematicaController::class,'
 /*-------------------------------------------------------
 RUTAS DE INSTRUCTOR
 --------------------------------------------------------*/
-
+//Route::get('/instructor', [InstructorController::class , 'index'])->name('mostrar_instructor');
 Route::match(['get','post'],'/instructor/crear', [InstructorController::class,'create'] )->name('crear_instructor');
 Route::match(['get','post'],'/ambientes/crear', [InstructorController::class,'store'] )->name('guardar_instructor');
 /*-------------------------------------------------------
@@ -99,7 +103,12 @@ RUTAS X
 Route::get('/registroambiente',[SedeController::class,'sede_ambiente']);
 Route::get('/principal', function () {
     return view('menu.index');
-});
+})->name('vista_menu');
+/*-------------------------------------------------------
+RUTA DE INICIO DE SESION
+--------------------------------------------------------*/
+Route::match(['get','post'],'/iniciosesion/crear' ,[UserController::class,'create'])->name('iniciosesion_cre');
+Route::post('/iniciosesion/guardar', [UserController::class, 'store'])->name('guardar_iniciosesion');
 
 
 
