@@ -1,18 +1,14 @@
 <?php
 
 use App\Http\Controllers\AreaController;
-use App\Http\Controllers\loginController;
 use App\Http\Controllers\registroinstruController;
 use App\Http\Controllers\SedeController;
 use App\Http\Controllers\AmbienteFormacionController;
 use App\Http\Controllers\RedTematicaController;
 use App\Http\Controllers\PersonaController;
 use App\Http\Controllers\InstructorController;
-<<<<<<< HEAD
 use App\Http\Controllers\HorarioController;
-=======
 use App\Http\Controllers\UserController;
->>>>>>> laura
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -89,7 +85,7 @@ RUTAS DE INSTRUCTOR
 --------------------------------------------------------*/
 //Route::get('/instructor', [InstructorController::class , 'index'])->name('mostrar_instructor');
 Route::match(['get','post'],'/instructor/crear', [InstructorController::class,'create'] )->name('crear_instructor');
-Route::match(['get','post'],'/ambientes/crear', [InstructorController::class,'store'] )->name('guardar_instructor');
+Route::match(['get','post'],'/instructor/guardar', [InstructorController::class,'store'] )->name('guardar_instructor');
 /*-------------------------------------------------------
 RUTAS ADICIONALES
 --------------------------------------------------------*/
