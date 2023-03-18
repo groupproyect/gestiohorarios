@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\red_tematica;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\InstructorController as C_instructor;
 
 class RedTematicaController extends Controller
 {
@@ -17,7 +18,16 @@ class RedTematicaController extends Controller
     public function index()
     {   
         $rt=red_tematica::all();
-        return view('redtematica.indexr', ['rtm'=>$rt]);
+        $a=new C_instructor;
+        $a2=$a->mostrar_instructor();
+        $a3=DB::select('select personas.nombres, instructors.id from personas,instructors WHERE personas.num_doc=instructors.num_doc AND instructors.lider=true;');
+        if(empty($a3)){
+            $a3 = [false];
+           
+        }
+        return view('redtematica.indexr', ['rtm'=>$rt , 'a2'=>$a2, 'a3'=>$a3[0]]);
+    
+    //  return $a2;
     }
 
     /**

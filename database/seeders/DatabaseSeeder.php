@@ -7,12 +7,13 @@ use App\Models\sede;
 use App\Models\area;
 use App\Models\ficha;
 use App\Models\ambiente_formacion;
+use App\Models\instructor;
+use App\Models\persona;
 use App\Models\red_tematica;
 use App\Models\tipo_contrato;
 use App\Models\nivel_formacion;
 use App\Models\jornada;
 use Illuminate\Database\Seeder;
-
 
 class DatabaseSeeder extends Seeder
 {
@@ -22,23 +23,22 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
-        
+    {   
         red_tematica::insert([
             [
-                'id'=> null,
+                'id'=> 1,
                 'descripcion'=>'Tecnologia',
                 
             ],
               
             [
-                'id'=> null,
+                'id'=> 2,
                 'descripcion'=>'Contabilidad',
                 
                 
             ],
             [  
-                'id'=>null,
+                'id'=>3,
                 'descripcion'=>'Comercio',
                 
                 
@@ -48,6 +48,7 @@ class DatabaseSeeder extends Seeder
    
         Sede::insert([
             [
+                'id'=> 1,
                 'nombre_sede'=>'Centro Industrial Empresarial',
                 'direccion'=>'Calle 31a'
                 
@@ -55,6 +56,7 @@ class DatabaseSeeder extends Seeder
             ],
               
             [
+                'id'=> 2,
                 'nombre_sede'=>'Sibate',
                 'direccion'=>'Calle 23a #12'
                 

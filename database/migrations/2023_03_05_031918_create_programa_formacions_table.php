@@ -19,8 +19,10 @@ return new class extends Migration
             $table->string('version');
             $table->string('duracion');
             $table->boolean('estado')->default(true);
-            $table->foreignId('id_area')->onUpdate('cascade')->onDelete('cascade')->constrained('areas');
-            $table->foreignId('id_niv_formacion')->onUpdate('cascade')->restrictOnDelete()->constrained('nivel_formacions');
+            $table->unsignedBigInteger('id_area');
+            $table->unsignedBigInteger('id_niv_formacion');
+            $table->foreign('id_area')->references('id')->on('areas')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('id_niv_formacion')->references('id')->on('nivel_formacions')->onUpdate('cascade');
 
         });
     }
