@@ -83,7 +83,7 @@ Route::post('redtematica/actualizar_redtematica',[RedTematicaController::class,'
 /*-------------------------------------------------------
 RUTAS DE INSTRUCTOR
 --------------------------------------------------------*/
-Route::get('/instructor', [InstructorController::class , 'index'])->name('mostrar_instructor');
+//Route::get('/instructor', [InstructorController::class , 'index'])->name('mostrar_instructor');
 Route::match(['get','post'],'/instructor/crear', [InstructorController::class,'create'] )->name('crear_instructor');
 Route::match(['get','post'],'/ambientes/crear', [InstructorController::class,'store'] )->name('guardar_instructor');
 /*-------------------------------------------------------

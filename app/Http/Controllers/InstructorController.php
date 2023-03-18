@@ -14,11 +14,13 @@ class InstructorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    /*public function index()
     {
-        //
+        
+      $instru=instructor::all();
+        return view('instructor.instrudatos', ['use'=>$instru]);
     }
-
+*/
     /**
      * Show the form for creating a new resource.
      *
