@@ -96,5 +96,5 @@ Route::get('/principal', function () {
 
 
 
-Route::get('/horario' , function(){ return view('horarios.principal');})->name('horario');
+Route::get('/horario' , function(){ return view('horarios.prueba');})->name('horario');
 
