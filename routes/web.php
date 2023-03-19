@@ -1,8 +1,6 @@
 <?php
 
 use App\Http\Controllers\AreaController;
-<<<<<<< HEAD
-use App\Http\Controllers\registroinstruController;
 use App\Http\Controllers\SedeController;
 use App\Http\Controllers\AmbienteFormacionController;
 use App\Http\Controllers\RedTematicaController;
@@ -10,14 +8,6 @@ use App\Http\Controllers\PersonaController;
 use App\Http\Controllers\InstructorController;
 use App\Http\Controllers\HorarioController;
 use App\Http\Controllers\UserController;
-=======
-use App\Http\Controllers\loginController;
-use App\Http\Controllers\registroinstruController;
-use App\Http\Controllers\SedeController;
-use App\Http\Controllers\AmbienteFormacionController;
-use App\Http\Controllers\InstructorController;
-use App\Http\Controllers\RedTematicaController;
->>>>>>> d972e7ca0f5d0babb428147bdf27cf989a6ba383
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -89,17 +79,12 @@ Route::post('redtematica/actualizar_redtematica',[RedTematicaController::class,'
 
  Route::delete('/redtematica/delete/{r}',  [RedTematicaController::class, 'destroy'])->name('eliminar_redtematica');
 
-<<<<<<< HEAD
 /*-------------------------------------------------------
 RUTAS DE INSTRUCTOR
 --------------------------------------------------------*/
 //Route::get('/instructor', [InstructorController::class , 'index'])->name('mostrar_instructor');
 Route::match(['get','post'],'/instructor/crear', [InstructorController::class,'create'] )->name('crear_instructor');
 Route::match(['get','post'],'/instructor/guardar', [InstructorController::class,'store'] )->name('guardar_instructor');
-=======
-
-
->>>>>>> d972e7ca0f5d0babb428147bdf27cf989a6ba383
 /*-------------------------------------------------------
 RUTAS ADICIONALES
 --------------------------------------------------------*/
@@ -113,29 +98,22 @@ RUTAS X
 Route::get('/registroambiente',[SedeController::class,'sede_ambiente']);
 Route::get('/principal', function () {
     return view('menu.index');
-<<<<<<< HEAD
 })->name('vista_menu');
 /*-------------------------------------------------------
 RUTA DE INICIO DE SESION
 --------------------------------------------------------*/
 Route::match(['get','post'],'/iniciosesion/crear' ,[UserController::class,'create'])->name('iniciosesion_cre');
 Route::post('/iniciosesion/guardar', [UserController::class, 'store'])->name('guardar_iniciosesion');
-=======
-});
->>>>>>> d972e7ca0f5d0babb428147bdf27cf989a6ba383
 
 
 
 Route::get('/horario' , function(){ return view('horarios.principal');})->name('horario');
-<<<<<<< HEAD
 Route::get('/prueba/persona' , [PersonaController::class,'mostrar_person']);
 Route::match(['get','post'],'/horario/crear', [HorarioController::class,'prueba'] )->name('prueba_h');
 
 Route::get('/prueba2/horario' , [HorarioController::class,'javascript']);
-=======
 
 Route::get('/instructor',[InstructorController::class,'index'])->name('mostrar_instructores');
 route::post('/actualizar',[InstructorController::class,'update'])->name('actualizarlider');
 
 route::get('/mostrar',[InstructorController::class,'mostrar']);
->>>>>>> d972e7ca0f5d0babb428147bdf27cf989a6ba383

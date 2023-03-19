@@ -169,7 +169,7 @@
       </form>    
     </tbody>
   </table>
-</div>  
+
 
         
 
@@ -204,6 +204,7 @@
     </div>
   </div>
 </div>
+</div>  
 
 <script>
 
@@ -222,11 +223,6 @@
     
       
   }
-
-  function origen(ev){
-    console.log("en origen")
-  
-  } 
 
   //funcion para evaluar si existe el objeto en la matriz
   function trae(dato,v,h,z){
@@ -292,6 +288,8 @@
         array[v][h][z] = data;
         ev.target.appendChild(document.getElementById(data))
         document.getElementById(data).dataset.bandera = dato.join(".");
+        let instructores = document.getElementById('instructor_' + v + "." + h + "." + z);
+        instructores.setAttribute('value',dato[0]);
 
       }else if (posicion == true ){
       }else{
@@ -319,6 +317,15 @@
     if(array2[parseInt(ev.target.id)]==""){
       
       let data=ev.dataTransfer.getData("text");
+      let bandera = false;
+      
+      for (let a = 0; a < array.length; a++) {
+        for (let b = 0; b < array[a].length; b++) {
+          let co
+          
+        }
+        
+      }
       let posicion=array2.indexOf(data)
       
       if(posicion == -1){
@@ -412,17 +419,27 @@ FUNCION PARA VERIFICAR COMPETENCIA POR FICHA
     </script>
 <style>
 #contelist{
+     width:250px;
+    height:520px;
+    margin-top: 145px;
     position: fixed;
     top: 0;
-    right: 30%;
+    left: 69%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-left: 1px;
+
+
   }
-  button{
+ button{
+   
     padding: 12px;
+    margin-left:40px;
+      margin-right: 30px; 
     background-color: #0e6b0e ;
     margin-bottom: 12px;
     color:white;
     font-size: 25px;
-    margin-left: 140px;     
     font-family: "LeJeuneDeck-Regular", Times, serif; 
    
   }
@@ -437,58 +454,57 @@ FUNCION PARA VERIFICAR COMPETENCIA POR FICHA
  }
 
   .caja{
-    width: 100%;
-    margin-left: 128px; 
+       width: 100%;
+    height: 1400px;
+
   
-    background-color:aquamarine;
+
   }
   .caja1{
-     width: 160px;
+        width: 160px;
      height: 65px;
+     margin-left:40px;
+      margin-right: 10px; 
+       margin-bottom: 10px;
      background:#9CC0E7;
-     margin-left: 1px; 
-     margin-bottom: 10px;
-     margin-right: 1px;
    }
 .caja2{
-    width: 170px;
+    width: 160px;
     height: 65px;
+        margin-left:40px;
+         margin-bottom: 10px;
     background:#e6d6a4;
-    margin-left: 1px; 
-    margin-bottom: 10px;
-    margin-right: 1px;
   }
   .caja3{
-    width: 170px;
+   width: 160px;
     height:65px;
+    margin-left:40px;
+         margin-bottom: 10px;
     background:#1d5f6d;
-    margin-left: 1px; 
-    margin-bottom: 10px;
-    margin-right: 1px;
   }
   .caja4{
-    width: 170px;
+    width: 160px;
     height: 65px;
+     margin-left:40px;
     background:#ae8b47;
-    margin-left: 1px; 
     margin-bottom: 10px;
-    margin-right: 1px;
+    
   }
   .caja5{
-    width: 170px;
+       width: 160px;
     height: 65px;
+     margin-left:40px;
     background:#508c94;
-    margin-left: 1px; 
     margin-bottom: 10px;
-    margin-right: 1px;
+   
   }
   .caja6{
-    width:170px;
+      width:160px;
     height: 65px;
+    margin-left:40px;
     background:#b19399;
-    margin-left: 1px; 
     margin-bottom: 10px;
-    margin-right: 1px;
+ 
   }
   #enviar{
     width: 70px;

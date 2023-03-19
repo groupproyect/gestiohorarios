@@ -11,8 +11,6 @@ use App\Models\instructor;
 use App\Models\persona;
 use App\Models\red_tematica;
 use App\Models\tipo_contrato;
-use App\Models\nivel_formacion;
-use App\Models\jornada;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -23,7 +21,8 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
     public function run()
-    {   
+    {
+       
         red_tematica::insert([
             [
                 'id'=> 1,
@@ -63,6 +62,7 @@ class DatabaseSeeder extends Seeder
                 
             ],
             [  
+                'id'=> 3,
                 'nombre_sede'=>'Uniminuto',
                 'direccion'=>'Calle 30b #10'
                 
@@ -70,40 +70,79 @@ class DatabaseSeeder extends Seeder
             ]]
         
         );
+        area::insert([
+            'id'=>1,
+            'id_red'=> 1,
+            'descripcion'=>'software'
+       ]);
+
         
-        tipo_contrato::insert([
+        ambiente_formacion::insert([
             [
-                'descripcion' => 'planta',
-                'cant_momentos' => '6'
+
+             'aforo'=>25,
+             'id_ambiente'=>'205',
+             'id_area'=>1,
+            
+             'id_sede'=>1
+
             ],
             [
-                'descripcion' => 'contrato',
-                'cant_momentos' => '8'
-            ]
-        ]);
+                 'aforo'=>20,
+                'id_ambiente'=>'101',
+                'id_area'=>1,
+               
+                'id_sede'=>1
 
-        nivel_formacion::insert(
+            ],
             [
-                [
-                    'descripcion' => 'tecnologo'
-                ],
-                [
-                    'descripcion' => 'tecnico'
-                ]
-            ]
-        );
+                  'aforo'=>25,
+                'id_ambiente'=>'201',
+                'id_area'=>1,
+              
+                'id_sede'=>1
+            ],
+           ]
+            );
 
-        jornada::insert(
-            [
-                [
-                    'descripcion' => 'mañana'
-                ],
-                [
-                    'descripcion' => 'tarde'
-                ]
+          tipo_contrato::insert([
+            'id'=>2,
+            'descripcion'=>'contrato fijo',
+            'cant_momentos'=>6,
+          ]);
+            persona::insert([
+                'num_doc'=>'5773953563',
+                'nombres'=>'Arlenys Carolina',
+                'apellidos'=>'Nieves',
+                'correo'=>'arle@gmail.com'
+            ],[
+                'num_doc'=>'5373953563',
+                'nombres'=>'Samuel ',
+                'apellidos'=>'Padilla',
+                'correo'=>'samuel@gmail.com'
             ]
-        );
         
+            );
+            instructor::insert([
+            'id'=>1,
+            'lider'=>0,
+            'cant_momentos'=>6,
+            'finalizacion_contrato'=>'24/09/2023',
+             'estado'=>1,
+             'id_area'=>1,
+             'num_doc'=>'5773953563',
+             'id_contrato'=>2,
+            
+       ],[
+        'id'=>2,
+        'lider'=>0,
+        'cant_momentos'=>8,
+        'finalizacion_contrato'=>'30/09/2024',
+         'estado'=>1,
+         'id_area'=>1,
+         'num_doc'=>'5373953563',
+         'id_contrato'=>1,
+       ]);
          
      
     }

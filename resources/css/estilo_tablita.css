@@ -12,6 +12,10 @@ body{
 
 .cajita_fondo{
     width:100%;
+    height: auto;
+    padding-bottom: 20px;
+    margin-right: 20%;
+
    
 }
 table{
@@ -98,7 +102,6 @@ table tr:nth-child(even) td{
     text-align: center;
     border-radius:2px;
     border:white 1px solid;
-<<<<<<< HEAD
 }
 
 .drop{
@@ -109,10 +112,6 @@ table tr:nth-child(even) td{
     height: 65px;
    border: 1px  ;
    
-=======
-   
-
->>>>>>> d972e7ca0f5d0babb428147bdf27cf989a6ba383
 }
 
 
@@ -122,21 +121,26 @@ estilo de cajitas
 
 
 #contelist{
-           
-    width: 170px;
+    width: 90px;
     height: 100px;
     text-align: center;
     padding-top:2%;
     padding-left: 50%;
-
+   
+    float:left;
+    margin-left: 40px;
+    
+ 
   }
 
-  .list{
+  #list{
      width: 800px;
      height: auto;
+    
+  }
 
   
-   }
+   
 
 
 

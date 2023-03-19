@@ -21,13 +21,13 @@ class RedTematicaController extends Controller
         $a=new C_instructor;
         $a2=$a->mostrar_instructor();
         $a3=DB::select('select personas.nombres, instructors.id from personas,instructors WHERE personas.num_doc=instructors.num_doc AND instructors.lider=true;');
-        if(empty($a3)){
-            $a3 = [false];
-           
+        if(empty($a3) == true){
+            $a3[0] = false;
+            $a3[1] = false;
         }
-        return view('redtematica.indexr', ['rtm'=>$rt , 'a2'=>$a2, 'a3'=>$a3[0]]);
-    
-    //  return $a2;
+        //return view('redtematica.indexr', ['rtm'=>$rt , 'a2'=>$a2, 'a3'=>$a3[0]]);
+        return $a3;
+
     }
 
     /**
