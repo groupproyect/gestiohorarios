@@ -109,6 +109,7 @@
         /*margin-top: -72px;*/
          /*margin-left: -15px;*/
           background-color:none;
+       
     
         
         }
@@ -121,13 +122,14 @@
          background-color:none;
         
         }
-
         #papeleraimg{
           width: auto;
           height: auto;
+          padding-right:140px;
           margin-bottom: -10px;
           margin-top: -5px;
           margin-left: 150px;
+          margin-right: 20px;
 
         }
 
@@ -138,6 +140,26 @@
     
         }
 
+        
+
+        #horarioimg{
+          width: auto;
+          height: auto;
+          margin-top: 265px;
+          margin-left: 360px;
+         
+
+        }
+
+        #horarioimg .horarioimg1{
+          width: 80px;
+          margin-top: -390px;
+          padding-right:10px;
+        
+          margin-left: -65px;
+         
+        }
+       
         .boton{
           background-color: transparent;
           padding-top: 1px;
@@ -154,13 +176,18 @@
           padding-bottom: 4px;
        
         }
+        #guardar{
+          display: none;
+        }
+
+        
       </style>
 
         <u><h3> @yield('titulo') </h3></u>
         @yield('contenido_cuadritos')
         
         <script src="../resources/views/plantillas/main.js"></script>
-                  
+        @yield('js')        
               
       
 </body>

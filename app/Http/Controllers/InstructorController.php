@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\instructor;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class InstructorController extends Controller
@@ -12,9 +13,19 @@ class InstructorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function mostrar_instructor()
     {
-        //
+        $a2=DB::select('select personas.nombres, instructors.id from personas,instructors WHERE personas.num_doc=instructors.num_doc;');
+       
+        //return view('redtematica.indexr',['a2'=>$a2]);
+        return $a2;
+        
+    }
+
+    public function mostrar()
+    {
+        $ins=instructor::all();
+        return view('instructor.tablainstru', ['use'=>$ins]);
     }
 
     /**
@@ -35,7 +46,7 @@ class InstructorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+    
     }
 
     /**
@@ -67,11 +78,22 @@ class InstructorController extends Controller
      * @param  \App\Models\instructor  $instructor
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, instructor $instructor)
+    public function update(Request $request)
     {
-        //
+        $a=instructor::where('lider','=',true)->get('id');
+        
+        
+        if(empty($a) == false){
+            instructor::where('id', '=' ,$a[0]->id)->update(['lider'=>false]);
+        }
+        instructor::where('id', '=' ,$request->lider)->update(['lider'=>true]);
+        
+       
+        return redirect()->route('mostrar_redtematica');
+ 
+        
     }
-
+    
     /**
      * Remove the specified resource from storage.
      *
@@ -82,4 +104,5 @@ class InstructorController extends Controller
     {
         //
     }
+
 }

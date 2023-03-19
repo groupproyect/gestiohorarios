@@ -12,6 +12,10 @@ body{
 
 .cajita_fondo{
     width:100%;
+    height: auto;
+    padding-bottom: 20px;
+    margin-right: 20%;
+
    
 }
 table{
@@ -101,6 +105,7 @@ table tr:nth-child(even) td{
     border:white 1px solid;
 }
 
+<<<<<<< HEAD
 
 .dia select{
     display: block;
@@ -113,6 +118,8 @@ table tr:nth-child(even) td{
     background-color:aqua;
 }
 
+=======
+>>>>>>> ivank
 .drop{
  
    text-align: center;
@@ -130,21 +137,26 @@ estilo de cajitas
 
 
 #contelist{
-           
-    width: 170px;
+    width: 90px;
     height: 100px;
     text-align: center;
     padding-top:2%;
     padding-left: 50%;
-
+   
+    float:left;
+    margin-left: 40px;
+    
+ 
   }
 
-  .list{
+  #list{
      width: 800px;
      height: auto;
+    
+  }
 
   
-   }
+   
 
 
 

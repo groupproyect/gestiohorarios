@@ -82,4 +82,14 @@ class TipoContratoController extends Controller
     {
         //
     }
+
+    public function mostrarContratos(){
+        $lista = tipo_contrato::orderby('id','asc')->get();
+        return $lista;
+    }
+
+    public function contrato($id){
+        $reg = tipo_contrato::where('id','=',$id)->get();
+        return $reg[0];
+    }
 }
