@@ -172,10 +172,10 @@
 
 
         
-
+  <button class="Instructores" id = "instructores">Instructores</button> 
 <div id="contelist">
    
-<button class="Instructores" id = "instructores">Instructores</button> 
+
  
   
   <div id="list">
@@ -204,7 +204,6 @@
     </div>
   </div>
 </div>
-</div>  
 
 <script>
 
@@ -356,9 +355,16 @@
 
     if (lista.style.display == "inline") {
         lista.style.display = "none";
+        lista.style.overflow-y=="scroll";
+  
+
+       
       }else {
         lista.style.display="inline";
         lista.style.position = "relative";
+        lista.style.overflow-y=="hidden";
+   
+      
       }
     });
 
@@ -419,27 +425,51 @@ FUNCION PARA VERIFICAR COMPETENCIA POR FICHA
     </script>
 <style>
 #contelist{
-     width:250px;
-    height:520px;
-    margin-top: 145px;
+     width:200px;
+    height:560px;
+    margin-top: 218px;
     position: fixed;
     top: 0;
-    left: 69%;
+    left: 75%;
     overflow-y: scroll;
     overflow-x: hidden;
     padding-left: 1px;
+    padding-top: 2px;
+       padding-bottom: 2px;
+   /* background-color:#babebf;*/
+    border-radius:10px;
+  /*  box-shadow: 5px 4px 10px #626367;*/
+
+  }
+
+  #contelist::-webkit-scrollbar{
+    width: 10px;
+    background-color::#babebf;
+    border-radius:10px;
+  }
+
+  #contelist::-webkit-scrollbar-thumb{
+    background-color: #4e4e4e;
+    border-radius:30px;
+    border: 2px /*solid #babebf*/;
+    
 
 
   }
  button{
-   
+  position: fixed;
+    top: 0;
+    left: 73.7%;
+    float:left;
+   margin-top:150px;
     padding: 12px;
-    margin-left:40px;
+    margin-left:90px;
       margin-right: 30px; 
     background-color: #0e6b0e ;
     margin-bottom: 12px;
     color:white;
     font-size: 25px;
+    border: none; 
     font-family: "LeJeuneDeck-Regular", Times, serif; 
    
   }
@@ -456,62 +486,72 @@ FUNCION PARA VERIFICAR COMPETENCIA POR FICHA
   .caja{
        width: 100%;
     height: 1400px;
+    margin-left: 9px;
+padding-top: 2px;
+
 
   
 
   }
   .caja1{
-        width: 160px;
+        width: 170px;
      height: 65px;
-     margin-left:40px;
-      margin-right: 10px; 
+
+     
        margin-bottom: 10px;
      background:#9CC0E7;
    }
 .caja2{
-    width: 160px;
+  width: 170px;
     height: 65px;
-        margin-left:40px;
+       
          margin-bottom: 10px;
     background:#e6d6a4;
   }
   .caja3{
-   width: 160px;
+    width: 170px;
     height:65px;
-    margin-left:40px;
+
          margin-bottom: 10px;
     background:#1d5f6d;
   }
   .caja4{
-    width: 160px;
+    width: 170px;
     height: 65px;
-     margin-left:40px;
+
     background:#ae8b47;
     margin-bottom: 10px;
     
   }
   .caja5{
-       width: 160px;
+    width: 170px;
     height: 65px;
-     margin-left:40px;
+
     background:#508c94;
     margin-bottom: 10px;
    
   }
   .caja6{
-      width:160px;
+    width: 170px;
     height: 65px;
-    margin-left:40px;
+    
     background:#b19399;
     margin-bottom: 10px;
  
   }
   #enviar{
-    width: 70px;
-    height: 45px;
+    width: 95px;
+    height: 50px;
     background-color: #1d5f6d;
+    color: white;
+    font-family: "LeJeuneDeck-Regular", Times, serif; 
+    padding: 12px;
     border-radius: 2px;
-    margin-top: 100px;
+    margin-top: 790px;
+    margin-left: -110px;
+    font-size: 25px;
+    position: absolute;
+  
   }
   </style>
 </body>

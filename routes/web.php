@@ -107,13 +107,9 @@ Route::post('/iniciosesion/guardar', [UserController::class, 'store'])->name('gu
 
 
 
-<<<<<<< HEAD
-Route::get('/horario' , function(){ return view('horarios.prueba');})->name('horario');
-=======
 Route::get('/horario' , function(){ return view('horarios.principal');})->name('horario');
 Route::get('/prueba/persona' , [PersonaController::class,'mostrar_person']);
 Route::match(['get','post'],'/horario/crear', [HorarioController::class,'prueba'] )->name('prueba_h');
->>>>>>> ivank
 
 Route::get('/prueba2/horario' , [HorarioController::class,'javascript']);
 

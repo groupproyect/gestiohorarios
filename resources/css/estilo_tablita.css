@@ -11,20 +11,24 @@ body{
 }
 
 .cajita_fondo{
-    width:100%;
+    width:99%;
     height: auto;
     padding-bottom: 20px;
-    margin-right: 20%;
+    padding-top: 1px;
+  
+    padding-left: 20px;
+
+
 
    
 }
 table{
     border: 2.5px;
-    width: 65%;
+    width: 71%;
     height: 500%;
-    margin-left: 20%;
-    margin-top:2%;
-    margin-right:20%;
+
+    margin-top:150px;
+
     /*padding: 45px 450px 20px 450px;*/
     background-color:#b6b6b6;
     border-radius:8px;
@@ -50,7 +54,7 @@ tr{
   
 }
 table tr:nth-child(odd) td{
-    background-color:#20335e;
+    background-color:#20335e ; 
     color: white;
     font-family: "LeJeuneDeck-Regular", Times, serif; 
 }
@@ -105,8 +109,7 @@ table tr:nth-child(even) td{
     border:white 1px solid;
 }
 
-<<<<<<< HEAD
-
+/*
 .dia select{
     display: block;
     position:relative;
@@ -116,10 +119,8 @@ table tr:nth-child(even) td{
   
     padding: 3px;
     background-color:aqua;
-}
+}*/
 
-=======
->>>>>>> ivank
 .drop{
  
    text-align: center;
@@ -152,6 +153,7 @@ estilo de cajitas
   #list{
      width: 800px;
      height: auto;
+     
     
   }
 
