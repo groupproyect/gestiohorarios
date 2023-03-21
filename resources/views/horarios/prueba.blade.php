@@ -13,8 +13,16 @@
                 @csrf
                 <table border="1" >
                     <thead>
-                        <th>competencia</th>
-                        <th>raps</th>
+                        <tr>
+                            <select name="programa" >
+                                <option value=""></option>
+                            </select>
+                        </tr>
+                        <tr>    
+                            <th>competencia</th>
+                            <th>raps</th>
+                        </tr>
+
                     </thead>
                     <tbody id="competencias">
                         <tr id="fila1">
@@ -24,11 +32,11 @@
                                 <input type="text" name="competencia[1]" >
                             </td>
                         
-                            <td id = "c_rap1">
+                            <td>
                                 <div id="div_c_rap1">
                                     <input id="input0" name="rap[1][]">
                                 </div>
-                                <center><button type="button" id="fila.1.agregar" onclick="agregar(event)">+</button></center>
+                                <button type="button" id="fila.1.agregar" onclick="agregar(event)">+</button>
                             </td>
                             
                         </tr>
@@ -62,28 +70,7 @@
                     n_i++
                     
                 }
-                var num = 2;
-                function agregar_c(e){
-                    let boton = document.getElementById('competencias');
-                    let elemento = '<tr id="fila'+num+'">'+
-                                        '<td>'+
-                                            '<button id="btn.0.eliminar" onclick="eliminar(event)" style="background-color: red; margin:5px;">X</button>'+
-                                            '<input type="text" name="competencia[]" >'+
-                                        '</td>'+
-                                        '<td>'+
-                                            '<input type="text" id="input'+n_i+'">'+
-                                            '<button type="button" id="btn.'+n_i+'.eliminar" onclick="eliminar(event)">-</button>'+
-                                            '<button type="button" id="fila'+num+'.agregar" onclick="agregar(event)">+</button>'+
-                                        '</td>'+
-                                    '</tr>';
-                    crear('tr',{id:'fila'+num},'competencias');
-                    crear('td',{id:'c_'+num},'fila'+num);
-                    crear('input',{type:"text",name:"competencia["+num+"]"})
-                    // <button type="button" id="btn.0.eliminar" onclick="eliminar(event)" style="background-color: red; margin:5px;">X</button>
-                    
-                    num++
-                }
-                function elimar(e,cod){
+                function eliminar(e,cod){
                     let id = e.target.id.split(".");
                     let boton = document.getElementById(e.target.id);
                     let elemento = document.getElementById("input"+id[1]);
@@ -95,6 +82,27 @@
                     elemento.remove();
                     boton.remove();
                 }
+
+                function elim_c(e){
+                    let boton = e.target.id.split(".");
+                    let element = document.getElementById(boton[1]);
+                    // console.log()
+                    element.remove();
+                }
+                
+                var num = 2;
+                function agregar_c(e){
+                    crear('tr',{id:'fila'+num},'competencias');
+                    crear('td',{id:'c_'+num},'fila'+num);
+                    crear('button',{type:'button', id:'eliminar.fila'+num, onclick:function(){elim_c(event)}, textContent:'X'},'c_'+num);
+                    crear('input',{type:"text",name:"competencia["+num+"]"},'c_'+num);
+                    crear('td',{id:'c_rap'+num},'fila'+num);
+                    crear('div',{id:'div_c_rap'+num},'c_rap'+num);
+                    crear('input',{ type: 'text', id:'input' + n_i, name:'rap[1][]'},"div_c_rap"+num);
+                    crear('button',{ type: 'button', id:'fila.' + num +'.agregar', onclick:function(){agregar(event);},textContent:'+'},"c_rap"+num);
+                    num++
+                }
+                
             </script>
             <script>
                 

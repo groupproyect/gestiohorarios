@@ -132,9 +132,14 @@ Route::post('/custom-login', [AuthController::class, 'loginusu'])->name('custom-
 Route::get('/logados', [AuthController::class, 'logados'])->name('logados');
 
 
-
+/*-------------------------------------------------------
+RUTAS DE AUTENTICACION HORARIO
+--------------------------------------------------------*/
 
 Route::get('/horario' , function(){ return view('horarios.principal');})->name('horario');
+Route::get('/horario/editar' , function(){ return view('horarios.edicion');})->name('horario_editar');
+
+
 Route::get('/prueba/persona' , [PersonaController::class,'mostrar_person']);
 Route::match(['get','post'],'/horario/crear', [HorarioController::class,'prueba'] )->name('prueba_h');
 
