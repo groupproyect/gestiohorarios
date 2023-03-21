@@ -11,6 +11,7 @@ use App\Models\instructor;
 use App\Models\persona;
 use App\Models\red_tematica;
 use App\Models\tipo_contrato;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -144,6 +145,12 @@ class DatabaseSeeder extends Seeder
          'id_contrato'=>1,
        ]);
          
-     
+       User::factory(2)->create();
+                                    
+       User::factory()->create([
+           'name' => 'Test User',
+           'email' => 'test@example.com',
+           'password' => bcrypt('holamundo1234')
+       ]);
     }
 }

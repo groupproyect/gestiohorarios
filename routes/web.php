@@ -8,6 +8,10 @@ use App\Http\Controllers\PersonaController;
 use App\Http\Controllers\InstructorController;
 use App\Http\Controllers\HorarioController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProgramacionController;
+use App\Http\Controllers\Semaforo_CompetenciaController;
+use App\Http\Controllers\CompetenciaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -85,6 +89,22 @@ RUTAS DE INSTRUCTOR
 //Route::get('/instructor', [InstructorController::class , 'index'])->name('mostrar_instructor');
 Route::match(['get','post'],'/instructor/crear', [InstructorController::class,'create'] )->name('crear_instructor');
 Route::match(['get','post'],'/instructor/guardar', [InstructorController::class,'store'] )->name('guardar_instructor');
+
+/*-------------------------------------------------------
+RUTAS DE PROGRAMA DE FORMACION
+--------------------------------------------------------*/
+
+
+
+/*-------------------------------------------------------
+RUTAS DE COMPETENCIAS Y RAPS
+--------------------------------------------------------*/
+Route::get('/crear/competencias',function(){
+    return view('horarios.prueba');
+});
+Route::match(['get','post'],'/guardar/competencias', [ProgramacionController::class,'store'] )->name('guardar_competencias');
+Route::match(['get','post'],'/mostrar/competencias', [Semaforo_CompetenciaController::class,'store'] )->name('mostrar_competencia');
+Route::match(['get','post'],'/hacer/competencias', [CompetenciaController::class,'store'] )->name('hacer_competencia');
 /*-------------------------------------------------------
 RUTAS ADICIONALES
 --------------------------------------------------------*/
@@ -104,6 +124,13 @@ RUTA DE INICIO DE SESION
 --------------------------------------------------------*/
 Route::match(['get','post'],'/iniciosesion/crear' ,[UserController::class,'create'])->name('iniciosesion_cre');
 Route::post('/iniciosesion/guardar', [UserController::class, 'store'])->name('guardar_iniciosesion');
+/*-------------------------------------------------------
+RUTAS DE AUTENTICACION INICIO DE SESION
+--------------------------------------------------------*/
+Route::get('/iniciosesion', [AuthController::class, 'indexusu'])->name('home');
+Route::post('/custom-login', [AuthController::class, 'loginusu'])->name('custom-login');
+Route::get('/logados', [AuthController::class, 'logados'])->name('logados');
+
 
 
 

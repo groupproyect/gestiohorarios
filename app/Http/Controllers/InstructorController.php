@@ -17,8 +17,8 @@ class InstructorController extends Controller
     {
         $a2=DB::select('select personas.nombres, instructors.id from personas,instructors WHERE personas.num_doc=instructors.num_doc;');
        
-        //return view('redtematica.indexr',['a2'=>$a2]);
-        return $a2;
+        return view('redtematica.indexr',['a2'=>$a2]);
+        //return $a2;
         
     }
 
