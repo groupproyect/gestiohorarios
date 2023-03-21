@@ -58,9 +58,6 @@
     <div id="agregarimg">
         <a href="{{route('crear_area')}}" ><img src="..\resources\img\agregar.png" alt="icono de agregar"></a>
     </div>
-<<<<<<< HEAD
-	
-=======
 
 
 	
@@ -85,7 +82,6 @@
         }
      </script>
      
->>>>>>> d972e7ca0f5d0babb428147bdf27cf989a6ba383
 @endsection
                 
  

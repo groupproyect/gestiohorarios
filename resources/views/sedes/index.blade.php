@@ -1,4 +1,4 @@
-@extends("../plantillas/areas")
+@extends("../plantillas/vistas")
 @section('inicial_titulo','Sedes')
 @section('titulo')
 <div id="titulo">       

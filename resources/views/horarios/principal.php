@@ -251,9 +251,10 @@
  
 
   <div id="list">
-   <div class="caja" id="" ondrop="drop(event)" ondragover="allowDrop(event)">
+   <div class="caja">
+  
     <?php
-    for ($i = 0; $i< 3; $i++) {
+    for ($i = 0; $i< 2; $i++) {
       ?>
       <div class="caja1" draggable="true" ondragstart="drag(event)" id="cajita"><h1>Adriana Espitia</h1></div>
       <?php
@@ -270,7 +271,14 @@
     <div class="caja4" draggable="true" ondragstart="drag(event)" id="cajita3"><h1>Evelio Chaparro </h1></div> 
     <div class="caja5" draggable="true" ondragstart="drag(event)" id="cajita4"><h1>Alexander</h1></div> 
     <div class="caja6" draggable="true" ondragstart="drag(event)" id="cajita5"><h1>Samuel Padilla</h1></div> 
-    </div>
+        <div class="drop" id="0" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="drop" id="1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="drop" id="2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+       <div class="drop" id="3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="drop" id="4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="drop" id="5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        
+      </div>
   </div>
 </div>
 
@@ -365,49 +373,45 @@
      width: 160px;
      height: 65px;
      background:#9CC0E7;
-     margin-left: 1px; 
-     margin-bottom: 10px;
-     margin-right: 1px;
+
+   
+
    }
 .caja2{
-    width: 170px;
+    width: 160px;
     height: 65px;
     background:#e6d6a4;
-    margin-left: 1px; 
-    margin-bottom: 10px;
-    margin-right: 1px;
+
+ 
   }
   .caja3{
-    width: 170px;
+    width: 160px;
     height:65px;
     background:#1d5f6d;
-    margin-left: 1px; 
-    margin-bottom: 10px;
-    margin-right: 1px;
+
+
   }
   .caja4{
-    width: 170px;
+    width: 160px;
     height: 65px;
     background:#ae8b47;
-    margin-left: 1px; 
-    margin-bottom: 10px;
-    margin-right: 1px;
+
+
   }
   .caja5{
-    width: 170px;
+    width: 160px;
     height: 65px;
     background:#508c94;
-    margin-left: 1px; 
-    margin-bottom: 10px;
-    margin-right: 1px;
+
+  
   }
   .caja6{
-    width:170px;
+    width:160px;
     height: 65px;
     background:#b19399;
-    margin-left: 1px; 
-    margin-bottom: 10px;
-    margin-right: 1px;
+ 
+  
+   
   }
   </style>
 </body>
