@@ -9,6 +9,7 @@ use App\Http\Controllers\RedTematicaController;
 use App\Http\Controllers\PersonaController;
 use App\Http\Controllers\InstructorController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -107,6 +108,11 @@ Route::match(['get','post'],'/iniciosesion/crear' ,[UserController::class,'creat
 Route::post('/iniciosesion/guardar', [UserController::class, 'store'])->name('guardar_iniciosesion');
 
 
+Route::get('/iniciosesion', [AuthController::class, 'indexusu'])->name('home');
+Route::post('/custom-login', [AuthController::class, 'loginusu'])->name('custom-login');
+Route::get('/logados', [AuthController::class, 'logados'])->name('logados');
 
 Route::get('/horario' , function(){ return view('horarios.principal');})->name('horario');
 Route::get('/prueba/persona' , [PersonaController::class,'mostrar_person']);
+
+

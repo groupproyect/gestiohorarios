@@ -11,6 +11,7 @@ use App\Models\red_tematica;
 use App\Models\tipo_contrato;
 use App\Models\nivel_formacion;
 use App\Models\jornada;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 
@@ -102,7 +103,18 @@ class DatabaseSeeder extends Seeder
             ]
         );
         
-         
+       
+                                    
+        User::factory()->create([
+            'name' => 'Test User',
+            'email' => 'test@example.com',
+            'password' => bcrypt('holamundo1234')
+        ]);
+        User::factory()->create([
+            'name' => 'coordi',
+            'email' => 'coordi@example.com',
+            'password' => bcrypt('holamundo1234')
+        ]);
      
     }
 }
