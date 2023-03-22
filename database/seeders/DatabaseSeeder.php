@@ -113,7 +113,7 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'coordi',
             'email' => 'coordi@example.com',
-            'password' => bcrypt('holamundo1234')
+            'password' => bcrypt('coordi03')
         ]);
      
     }
