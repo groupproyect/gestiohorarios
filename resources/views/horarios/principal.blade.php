@@ -43,7 +43,7 @@
           <td><h5>ficha</h5></td>
           <td >
             <div class="td_dia">
-              <div class="dia" id="0.{{$i}}.0" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="origen(event)">
+              <div class="dia" id="0.{{$i}}.0.dia" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="origen(event)">
                 <select name="competencia_lunes[]" id="0.{{$i}}.0.s" draggable="false" onclick="opcion(event)" >
                   <option disabled selected>debe escoger competencia</option>
                   <option value="1" id="0.{{$i}}.0.0" class="0.{{$i}}.0.s" >construir</option>
@@ -57,7 +57,7 @@
             <div id="dia1"></div>
           </td>
           <td>
-            <div class="dia" id="0.{{$i}}.1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="dia" id="0.{{$i}}.1.dia" ondrop="drop(event)" ondragover="allowDrop(event)">
               <select name="competencia_martes[]" id="0.{{$i}}.1.s" draggable="false" onclick="opcion(event)" >
                 <option disabled selected>debe escoger competencia</option>
                 <option value="1" id="0.{{$i}}.1.0" class="0.{{$i}}.0.s" >construir</option>
@@ -69,7 +69,7 @@
             </div>
           </td>
           <td>
-            <div class="dia" id="0.{{$i}}.2" ondrop="drop(event)" ondragover="allowDrop(event)" >
+            <div class="dia" id="0.{{$i}}.2.dia" ondrop="drop(event)" ondragover="allowDrop(event)" >
               <select name="competencia_miercoles[]" id="0.{{$i}}.2.s" draggable="false" onclick="opcion(event)" >
                 <option disabled selected>debe escoger competencia</option> 
                 <option value="1" id="0.{{$i}}.2.0" class="0.{{$i}}.0.s" >construir</option>
@@ -81,7 +81,7 @@
             </div>
           </td>
           <td>
-            <div class="dia" id="0.{{$i}}.3" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="dia" id="0.{{$i}}.3.dia" ondrop="drop(event)" ondragover="allowDrop(event)">
               <select name="competencia_jueves[]" id="0.{{$i}}.3.s" draggable="false" onclick="opcion(event)" >
                 <option disabled selected>debe escoger competencia</option>
                 <option value="1" id="0.{{$i}}.3.0" class="0.{{$i}}.0.s" >construir</option>
@@ -93,7 +93,7 @@
             </div>
           </td>
           <td>
-            <div class="dia" id="0.{{$i}}.4" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="dia" id="0.{{$i}}.4.dia" ondrop="drop(event)" ondragover="allowDrop(event)">
               <select name="competencia_viernes[]" id="0.{{$i}}.4.s" draggable="false" onclick="opcion(event)" >
                 <option disabled selected>debe escoger competencia</option>
                 <option value="1" id="0.{{$i}}.4.0" class="0.{{$i}}.0.s" >construir</option>
@@ -115,7 +115,7 @@
       <tr class="mini_cuadritos" style="background:darkseagreen;">
           <td><h5>ficha</h5></td>
           <td>
-            <div class="dia" id="1.{{$i}}.0" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="origen(event)">
+            <div class="dia" id="1.{{$i}}.0.dia" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="origen(event)">
               
               <select name="competencia_lunes[]" id="1.{{$i}}.0.s" draggable="false" onclick="opcion(event)" >
                 <option disabled selected>debe escoger competencia</option>
@@ -129,7 +129,7 @@
             </div>
           </td>
           <td>
-            <div class="dia" id="1.{{$i}}.1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="dia" id="1.{{$i}}.1.dia" ondrop="drop(event)" ondragover="allowDrop(event)">
               <select name="competencia_martes[]" id="1.{{$i}}.1.s" draggable="false" onclick="opcion(event)" >
                 <option disabled selected>debe escojer competencia</option>
                 <option value="1" id="1.{{$i}}.1.0" class="1.{{$i}}.0.s" >construir</option>
@@ -142,7 +142,7 @@
             </div>
           </td>
           <td>
-            <div class="dia" id="1.{{$i}}.2" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="dia" id="1.{{$i}}.2.dia" ondrop="drop(event)" ondragover="allowDrop(event)">
               <select name="competencia_miercoles[]" id="1.{{$i}}.2.s" draggable="false" onclick="opcion(event)" >
                 <option disabled selected>debe escoger competencia</option>
                 <option value="1" id="1.{{$i}}.2.0" class="1.{{$i}}.0.s" >construir</option>
@@ -155,7 +155,7 @@
             </div>
           </td>
           <td>
-            <div class="dia" id="1.{{$i}}.3" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="dia" id="1.{{$i}}.3.dia" ondrop="drop(event)" ondragover="allowDrop(event)">
               <select name="competencia_jueves[]" id="1.{{$i}}.3.s" draggable="false" onclick="opcion(event)" >
                 <option disabled selected>debe escoger competencia</option>
                 <option value="1" id="1.{{$i}}.3.0" class="1.{{$i}}.0.s" >construir</option>
@@ -168,7 +168,7 @@
             </div>
           </td>
           <td>
-            <div class="dia" id="1.{{$i}}.4" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="dia" id="1.{{$i}}.4.dia" ondrop="drop(event)" ondragover="allowDrop(event)">
               <select name="competencia_viernes[]" id="1.{{$i}}.4.s" draggable="false" onclick="opcion(event)" >
                 <option disabled selected>debe escoger competencia</option>
                 <option value="1" id="1.{{$i}}.4.0" class="1.{{$i}}.0.s" >construir</option>
@@ -199,7 +199,7 @@
       <table class="cajainstru1" border="0" style="border-color: #e1ddbf;" > 
         <tr  style="border-color: #e1ddbf;"  border="0">
           <td style="background-color: #e1ddbf; "><div class="caja1" draggable="true" ondragstart="drag(event)" id="cajita.{{$o}}"><h1>Adriana Espitia</h1></div></td>
-          <td style="background-color: #e1ddbf;"><div class="drop" id="{{$o}}" ondrop="drop2(event)" ondragover="allowDrop(event)"></div></td>
+          <td style="background-color: #e1ddbf;"><div class="drop" id="{{$o}}.cont" ondrop="drop2(event)" ondragover="allowDrop(event)"></div></td>
           
         </tr>
       </table>
@@ -207,32 +207,32 @@
       <table  class="cajainstru1" border="0">
         <tr>
           <td style="background-color: #e1ddbf;"><div class="caja1" draggable="true" ondragstart="drag(event)" id="cajita1.{{$o}}"><h1>Arlenys Nieves</h1></div></td>
-          <td><div style="background-color: #e1ddbf;" class="drop" id="{{$o}}" ondrop="drop2(event)" ondragover="allowDrop(event)"></div></td>
+          <td><div style="background-color: #e1ddbf;" class="drop" id="{{$o}}.cont" ondrop="drop2(event)" ondragover="allowDrop(event)"></div></td>
         </tr>
       </table>
 
       <table  class="cajainstru1" border="0">
         <tr>
           <td style="background-color: #e1ddbf;"><div class="caja1" draggable="true" ondragstart="drag(event)" id="cajita2.{{$o}}"><h1>Miguel Gomez</h1></div></td>
-          <div style="background-color: #e1ddbf;" class="drop" id="{{$o}}" ondrop="drop2(event)" ondragover="allowDrop(event)"></div></td>
+          <div style="background-color: #e1ddbf;" class="drop" id="{{$o}}.cont" ondrop="drop2(event)" ondragover="allowDrop(event)"></div></td>
         </tr>
       </table>
       <table  class="cajainstru1" border="0">
         <tr>
           <td  style="background-color: #e1ddbf;"><div class="caja1" draggable="true" ondragstart="drag(event)" id="cajita3.{{$o}}"><h1>Evelio Chaparro </h1></div></td>
-          <div style="background-color: #e1ddbf;" class="drop" id="{{$o}}" ondrop="drop2(event)" ondragover="allowDrop(event)"></div> </td>
+          <div style="background-color: #e1ddbf;" class="drop" id="{{$o}}.cont" ondrop="drop2(event)" ondragover="allowDrop(event)"></div> </td>
         </tr>
       </table>
       <table  class="cajainstru1" border="0">
         <tr >
           <td style="background-color: #e1ddbf;"> <div class="caja1" draggable="true" ondragstart="drag(event)" id="cajita4.{{$o}}"><h1>Alexander</h1></div></td>
-          <td><div style="background-color: #e1ddbf;" class="drop" id="{{$o}}" ondrop="drop2(event)" ondragover="allowDrop(event)"></div></td>
+          <td><div style="background-color: #e1ddbf;" class="drop" id="{{$o}}.cont" ondrop="drop2(event)" ondragover="allowDrop(event)"></div></td>
         </tr>
       </table>
       <table  class="cajainstru1" border="0">
         <tr>
           <td style="background-color: #e1ddbf;"> <div class="caja1" draggable="true" ondragstart="drag(event)" id="cajita5.{{$o}}"><h1>Samuel Padilla</h1></div></td>
-          <td><div style="background-color: #e1ddbf;" class="drop" id="{{$o}}" ondrop="drop2(event)" ondragover="allowDrop(event)"></div></td>
+          <td><div style="background-color: #e1ddbf;" class="drop" id="{{$o}}.cont" ondrop="drop2(event)" ondragover="allowDrop(event)"></div></td>
         </tr>
       </table>
 
@@ -279,8 +279,7 @@
   function drag(ev){
 
     ev.dataTransfer.setData("text", ev.target.id)
-    ev.dataTransfer.setData("padre", ev.target.parentNode.id)
-    console.log("este es el padre: "+ ev.target.parentNode.id)
+   
       
   }
 
@@ -303,30 +302,17 @@
         
       }
     }
-
-    if(bandera == false){
-      
-      for (let a = 0; a < array.length; a++) {
-        
-        for (let b = 0; b < array.length; b++) {
-          
-          let val = array[a][b].indexOf(dato.join("."));
-          
-          if(val != -1){
-            bandera = [a,b,val];
-          } 
-        }
-      }
-    }
-    
     let respuesta = bandera;
     console.log(respuesta)
     return respuesta;
   }
 
+  
+
   var array = [[["","","","",""],["","","","",""]],[["","","","",""],["","","","",""]]];
 
   //array.length=0;
+
   function drop(ev){
 
     let evento;
@@ -354,43 +340,41 @@
       let dato = data.split(".");
       let posicion = trae(dato,v,h,z);
       console.log("esta es la posicion: "+posicion)
-      console.log(ev)
+    
 
       if(posicion == false){
-
+        console.log("verifica!!!!!!")
         array[v][h][z] = data;
-        evento.appendChild(document.getElementById(data))
-        let instructores = document.getElementById('instructor_' + v + "." + h + "." + z);
-        instructores.setAttribute('value',dato[0]);
+        let objeto = document.getElementById(data);
+        console.log(objeto)
+        let parent = objeto.parentNode.id.split(".");
+        console.log(parent)
+        let instructores;
         
-        //return para la funcion append
-        if(Array.isArray(ev) === true){
-          return false;  
-        }
-        
-      }else if (posicion == true ){
-        if(Array.isArray(ev) === true){
-          return true;  
-        }
-      }else{
+        if(isNaN(parent)==false){
+          if(Array.isArray(ev) === false){
+            if(parent[parent.length-1] == "dia"){
 
-        array[posicion[0]][posicion[1]][posicion[2]]="";
-        let instructores = document.getElementById('instructor_' + posicion[0] + "." + posicion[1] + "." + posicion[2]);
-        instructores.setAttribute('value',"");
-        array[v][h][z] = data;
+              array[parent[0]][parent[1]][parent[2]]="";
+              instructores = document.getElementById('instructor_' + parent[0] + "." + parent[1] + "." + parent[2] );
+              instructores.setAttribute('value',"");
+
+            }
+          }
+          if(parent[parent.length-1] == "cont"){
+            array2[parent[0]]="";
+          }
+        }
         evento.appendChild(document.getElementById(data));
-        instructores = document.getElementById('instructor_' + v + "." + h + "." + z );
+        document.getElementById('instructor_' + v + "." + h + "." + z );
         instructores.setAttribute('value',dato[0]);
-        console.log("el array: " + array);
-
-        //return para la funcion append
-        if(Array.isArray(ev) === true){
-          return false;  
-        }
-        
-        
-      }            
-
+        // retorno para validacion en la funcion append
+        return false;
+      }else if (posicion == true ){  
+        window.alert("ese instructor ya ha sido asignado a esta jornada")
+        // retorno para validacion en la funcion append
+        return true;
+      }
     }
   } 
 
@@ -398,33 +382,26 @@
 
   function drop2(ev){
     console.log("funcion drop 2")
+
     if(array2[parseInt(ev.target.id)]==""){
       
       let data=ev.dataTransfer.getData("text");
-      let bandera = false;
-      
-      for (let a = 0; a < array.length; a++) {
-        for (let b = 0; b < array[a].length; b++) {
-          let co
-          
+      let objeto = document.getElementById(data);
+      let parent = objeto.parentNode.id.split(".");
+      if(isNaN(parent)==false){
+        if(parent[parent.length-1] == "dia"){
+
+          array[parent[0]][parent[1]][parent[2]]="";
+          let instructores = document.getElementById('instructor_' + parent[0] + "." + parent[1] + "." + parent[2] );
+          instructores.setAttribute('value',"");
+
         }
-        
+        if(parent[parent.length-1] == "cont"){
+          array2[parent[0]]="";
+        }
       }
-      let posicion=array2.indexOf(data)
-      
-      if(posicion == -1){
-
-        array2[parseInt(ev.target.id)] = data;
-        ev.target.appendChild(document.getElementById(data))
-
-      }else{
-
-        array2[posicion]="";
-        array2[parseInt(ev.target.id)] = data;
-        ev.target.appendChild(document.getElementById(data))
-      
-      }            
-
+      ev.target.appendChild(document.getElementById(data));
+    
     }  
                   
   }
