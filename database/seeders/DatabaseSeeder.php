@@ -134,23 +134,23 @@ class DatabaseSeeder extends Seeder
              'num_doc'=>'5773953563',
              'id_contrato'=>2,
             
-       ],[
-        'id'=>2,
-        'lider'=>0,
-        'cant_momentos'=>8,
-        'finalizacion_contrato'=>'30/09/2024',
-         'estado'=>1,
-         'id_area'=>1,
-         'num_doc'=>'5373953563',
-         'id_contrato'=>1,
-       ]);
-         
-       User::factory(2)->create();
-                                    
-       User::factory()->create([
-           'name' => 'Test User',
-           'email' => 'test@example.com',
-           'password' => bcrypt('holamundo1234')
-       ]);
+            ],[
+                'id'=>2,
+                'lider'=>0,
+                'cant_momentos'=>8,
+                'finalizacion_contrato'=>'30/09/2024',
+                'estado'=>1,
+                'id_area'=>1,
+                'num_doc'=>'5373953563',
+                'id_contrato'=>1,
+            ]);
+                
+            User::factory(2)->create();
+                                            
+            User::factory()->create([
+                'name' => 'Test User',
+                'email' => 'test@example.com',
+                'password' => 'holamundo1234'
+            ]);
     }
 }

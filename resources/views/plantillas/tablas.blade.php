@@ -45,6 +45,15 @@
         tbody{
           background-color: #FEFEFE;
         }
+
+        #agregarimg{
+           /*Las cuatro propiedades de esta clase permiten que el boton de agregar se quede 
+           inmovil sin importar si se moviliza la pagina de arriba o hacia abajo */
+          display: block;
+          position:fixed;
+          bottom:80;
+          right: 120;
+        }
       </style>
         
         <table align="center">
@@ -60,6 +69,8 @@
             @yield('contenido_tabla')
           </tbody>
 	      </table>	
-      
+
+        @yield('agregar')
+            
 </body>
 </html>

@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\instructor;
+use App\Http\Controllers\AreaController as AreaController;
+use App\Http\Controllers\TipoContratoController as tipoContrato;
+use App\Http\Controllers\PersonaController as Persona;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
@@ -35,7 +38,16 @@ class InstructorController extends Controller
      */
     public function create()
     {
-        //
+        $area = new AreaController;
+        $list_areas = $area->mostrarAreas();
+
+        $contrato = new tipoContrato;
+        $list_contrats = $contrato->mostrarContratos();
+
+        $cod = route('guardar_instructor');
+        $titulo = "Creacion Instructor";
+
+        return view('instructor.registroinstru',['areas'=>$list_areas, 'contratos'=>$list_contrats,'titulo'=>$titulo, 'cod'=>$cod]);
     }
 
     /**
@@ -46,8 +58,21 @@ class InstructorController extends Controller
      */
     public function store(Request $request)
     {
-    
+        $persona = new Persona();
+        $persona->store($request);
+        $prueba = $persona->mostrar_person($request->num_doc);
+        if(!empty($prueba)){
+            $contrato = new tipoContrato();
+            $instructor = new instructor();
+            $instructor->num_doc = $request->num_doc;
+            $instructor->lider = false;
+            $instructor->id_area = $request->id_contrato;
+            $instructor->finalizacion_contrato = $request->finalizacion_contrato;
+            $instructor->id_contrato = $request->id_contrato;
+            $instructor->cant_momentos = $contrato->contrato($request->id_contrato);
+            return "bieeeeeen";
     }
+}
 
     /**
      * Display the specified resource.
@@ -66,9 +91,16 @@ class InstructorController extends Controller
      * @param  \App\Models\instructor  $instructor
      * @return \Illuminate\Http\Response
      */
-    public function edit(instructor $instructor)
-    {
-        //
+    public function edit(instructor $instructor)    {
+        $area = new AreaController;
+        $list_areas = $area->mostrarAreas();
+
+        $contrato = new tipoContrato;
+        $list_contrats = $contrato->mostrarContratos();
+
+        $cod = route('guardar_instructor');
+        $titulo = "Creacion Instructor";
+        return view('instructor.registroinstru',['areas'=>$list_areas, 'contratos'=>$list_contrats,'titulo'=>$titulo, 'cod'=>$cod]);
     }
 
     /**
@@ -80,17 +112,15 @@ class InstructorController extends Controller
      */
     public function update(Request $request)
     {
-        $a=instructor::where('lider','=',true)->get('id');
-        
-        
-        if(empty($a) == false){
-            instructor::where('id', '=' ,$a[0]->id)->update(['lider'=>false]);
-        }
-        instructor::where('id', '=' ,$request->lider)->update(['lider'=>true]);
-        
-       
-        return redirect()->route('mostrar_redtematica');
- 
+        $contrato = new tipoContrato();
+        $instructor = new instructor();
+        $instructor->num_doc = $request->num_doc;
+        $instructor->lider = false;
+        $instructor->id_area = $request->id_contrato;
+        $instructor->finalizacion_contrato = $request->finalizacion_contrato;
+        $instructor->id_contrato = $request->id_contrato;
+        $instructor->cant_momentos = $contrato->contrato($request->id_contrato);
+        return "bieeeeeen";
         
     }
     
@@ -100,9 +130,11 @@ class InstructorController extends Controller
      * @param  \App\Models\instructor  $instructor
      * @return \Illuminate\Http\Response
      */
-    public function destroy(instructor $instructor)
+    public function destroy($instructor)
     {
-        //
+        DB::delete('DELETE FROM persona WHERE num_doc= ?' ,[$instructor]);
+        return redirect()->route('mostrar_instructor');
     }
 
-}
+} 
+

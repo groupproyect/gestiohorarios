@@ -85,15 +85,15 @@
                 @enderror
             </label>
         @else
-            @foreach($informacion_instru as $key)
+            @foreach($informacion as $key)
             <label>
                 <h4>Nombre_instructor</h4> 
-                <input type="text" name="nombre_instructor" placeholder="{{$key->nombre_instructor}}" value="{{$key->nombre_instructor}}" >
+                <input type="text" name="nombre_instructor" placeholder="{{$key->nombre}}" value="{{$key->nombre_instructor}}" >
             </label>
             <br>
                 <label>
                     <h4>Apellido_instructor</h4> 
-                    <input type="text" name="apellido_instructor" placeholder="{{$key->apellido_instructor}}" value="{{$key->apellido_instructor}}">
+                    <input type="text" name="apellido_instructor" placeholder="{{$key->apellido}}" value="{{$key->apellido_instructor}}">
                 </label>
             <br>
             <label>

@@ -86,9 +86,10 @@ Route::post('redtematica/actualizar_redtematica',[RedTematicaController::class,'
 /*-------------------------------------------------------
 RUTAS DE INSTRUCTOR
 --------------------------------------------------------*/
-//Route::get('/instructor', [InstructorController::class , 'index'])->name('mostrar_instructor');
+Route::get('/instructor', [InstructorController::class , 'mostrar'])->name('mostrar_instructor');
 Route::match(['get','post'],'/instructor/crear', [InstructorController::class,'create'] )->name('crear_instructor');
 Route::match(['get','post'],'/instructor/guardar', [InstructorController::class,'store'] )->name('guardar_instructor');
+Route::delete('/instructor/delete/{instructor}',  [InstructorController::class, 'destroy'])->name('eliminar_instructor');
 
 /*-------------------------------------------------------
 RUTAS DE PROGRAMA DE FORMACION
@@ -145,7 +146,7 @@ Route::match(['get','post'],'/horario/crear', [HorarioController::class,'prueba'
 
 Route::get('/prueba2/horario' , [HorarioController::class,'javascript']);
 
-Route::get('/instructor',[InstructorController::class,'index'])->name('mostrar_instructores');
+
 route::post('/actualizar',[InstructorController::class,'update'])->name('actualizarlider');
 
-route::get('/mostrar',[InstructorController::class,'mostrar']);
+
