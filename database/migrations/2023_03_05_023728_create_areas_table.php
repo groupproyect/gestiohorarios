@@ -16,8 +16,10 @@ return new class extends Migration
         Schema::create('areas', function (Blueprint $table) {
             $table->id();
             $table->string('descripcion');
-            $table->foreignId('id_red')->onUpdate('cascade')->onDelete('cascade')->constrained('red_tematicas');
             $table->boolean('estado')->default(true);
+            $table->unsignedBigInteger('id_red');
+            $table->foreign('id_red')->references('id')->on('red_tematicas')->onUpdate('cascade')->onDelete('cascade');
+            
         });
     }
 

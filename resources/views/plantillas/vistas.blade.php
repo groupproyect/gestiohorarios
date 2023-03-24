@@ -12,7 +12,10 @@
       
       <style>
 
-       
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+        
         /*body{
            background-image: url('https://i.pinimg.com/564x/e8/ba/c0/e8bac0f73fa5b7ae697857faaaf57d5c.jpg');
            background-attachment:fixed;
@@ -26,13 +29,10 @@
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-       background-color: #e1ddbf;
-      
-      }
+          }
         #titulo{
         margin-top:25px;
-          
-        font-family: "LeJeuneDeck-Regular", Times, serif; 
+        font-family: 'Quicksand', sans-serif;
          text-align: center;
       
          color:black;
@@ -45,7 +45,7 @@
         margin-top: 2px ;
         margin-left:30px;
         margin-right: 10px;
-        /*background-color: blue;*/
+       /* background-color: blue;*/
        }
       
       
@@ -87,10 +87,9 @@
           margin-right: 15px;
           width:auto;
           height:auto;
-          font-size: 20px;
+          font-size: 25px;
           color:white;
           text-align: center;
-          font-family: "Cormorant",Georgia,"Times New Roman",Times,serif;
         }
 
         #agregarimg{
@@ -109,7 +108,6 @@
         /*margin-top: -72px;*/
          /*margin-left: -15px;*/
           background-color:none;
-       
     
         
         }
@@ -122,14 +120,13 @@
          background-color:none;
         
         }
+
         #papeleraimg{
           width: auto;
           height: auto;
-          padding-right:140px;
           margin-bottom: -10px;
           margin-top: -5px;
           margin-left: 150px;
-          margin-right: 20px;
 
         }
 
@@ -140,26 +137,6 @@
     
         }
 
-        
-
-        #horarioimg{
-          width: auto;
-          height: auto;
-          margin-top: 265px;
-          margin-left: 360px;
-         
-
-        }
-
-        #horarioimg .horarioimg1{
-          width: 80px;
-          margin-top: -390px;
-          padding-right:10px;
-        
-          margin-left: -65px;
-         
-        }
-       
         .boton{
           background-color: transparent;
           padding-top: 1px;
@@ -176,18 +153,13 @@
           padding-bottom: 4px;
        
         }
-        #guardar{
-          display: none;
-        }
-
-        
       </style>
 
         <u><h3> @yield('titulo') </h3></u>
         @yield('contenido_cuadritos')
         
         <script src="../resources/views/plantillas/main.js"></script>
-        @yield('js')        
+                  
               
       
 </body>

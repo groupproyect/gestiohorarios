@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\rap_semaforo;
+use App\Models\semaforo_competencia;
 use Illuminate\Http\Request;
 
-class RapSemaforoController extends Controller
+class Semaforo_CompetenciaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -35,16 +35,16 @@ class RapSemaforoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return "semaforo_competenciacontroller";
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\rap_semaforo  $rap_semaforo
+     * @param  \App\Models\semaforo_competencia  $semaforo_competencia
      * @return \Illuminate\Http\Response
      */
-    public function show(rap_semaforo $rap_semaforo)
+    public function show(semaforo_competencia $semaforo_competencia)
     {
         //
     }
@@ -52,10 +52,10 @@ class RapSemaforoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\rap_semaforo  $rap_semaforo
+     * @param  \App\Models\semaforo_competencia  $semaforo_competencia
      * @return \Illuminate\Http\Response
      */
-    public function edit(rap_semaforo $rap_semaforo)
+    public function edit(semaforo_competencia $semaforo_competencia)
     {
         //
     }
@@ -64,10 +64,10 @@ class RapSemaforoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\rap_semaforo  $rap_semaforo
+     * @param  \App\Models\semaforo_competencia  $semaforo_competencia
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, rap_semaforo $rap_semaforo)
+    public function update(Request $request, semaforo_competencia $semaforo_competencia)
     {
         //
     }
@@ -75,10 +75,10 @@ class RapSemaforoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\rap_semaforo  $rap_semaforo
+     * @param  \App\Models\semaforo_competencia  $semaforo_competencia
      * @return \Illuminate\Http\Response
      */
-    public function destroy(rap_semaforo $rap_semaforo)
+    public function destroy(semaforo_competencia $semaforo_competencia)
     {
         //
     }

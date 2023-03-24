@@ -11,16 +11,24 @@ body{
 }
 
 .cajita_fondo{
-    width:100%;
+    width:99%;
+    height: auto;
+    padding-bottom: 20px;
+    padding-top: 1px;
+  
+    padding-left: 20px;
+
+
+
    
 }
 table{
     border: 2.5px;
-    width: 65%;
+    width: 71%;
     height: 500%;
-    margin-left: 20%;
-    margin-top:2%;
-    margin-right:20%;
+
+    margin-top:150px;
+
     /*padding: 45px 450px 20px 450px;*/
     background-color:#b6b6b6;
     border-radius:8px;
@@ -29,13 +37,13 @@ table{
 
 }
 table th{
-    height:30px;
+    height:20px;
     width:30px;
     background-color:#20335e;
     color:white;
     border-radius:3px;
     border-style:ridge;
-    border:white 1px solid;
+    border:rgb(254, 252, 252) 1px solid;
     font-family: "LeJeuneDeck-Regular", Times, serif; 
    
 
@@ -46,7 +54,7 @@ tr{
   
 }
 table tr:nth-child(odd) td{
-    background-color:#20335e;
+    background-color:#20335e ; 
     color: white;
     font-family: "LeJeuneDeck-Regular", Times, serif; 
 }
@@ -93,13 +101,34 @@ table tr:nth-child(even) td{
 }
 
 .dia{
+   
     width:100%;
-    height: 70px;
+    height: 100px;
     text-align: center;
     border-radius:2px;
     border:white 1px solid;
-   
+}
 
+/*
+.dia select{
+    display: block;
+    position:relative;
+    bottom:30;
+    top:10;
+    right: 100;
+  
+    padding: 3px;
+    background-color:aqua;
+}*/
+
+.drop{
+ 
+   text-align: center;
+    border-radius:2px;
+    width:160px;
+    height: 65px;
+   border: 1px  ;
+   
 }
 
 
@@ -109,21 +138,27 @@ estilo de cajitas
 
 
 #contelist{
-           
-    width: 170px;
+    width: 90px;
     height: 100px;
     text-align: center;
     padding-top:2%;
     padding-left: 50%;
-
+   
+    float:left;
+    margin-left: 40px;
+    
+ 
   }
 
-  .list{
+  #list{
      width: 800px;
      height: auto;
+     
+    
+  }
 
   
-   }
+   
 
 
 

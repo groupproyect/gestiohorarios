@@ -29,7 +29,6 @@
 						<li><a href="{{route('mostrar_ambientes')}}"  target="principal" >Ambientes</a></li>
 						<li><a href="{{route('mostrar_areas')}}" target="principal" >Areas</a></li>
 						
-						
 					</ul>
 				</li>
 
@@ -40,9 +39,10 @@
 				
 				
 				<a href="{{route('horario')}}" target="principal"><span class="mif-pencil mif-lg"></span> Crear Horario</a>
-				    <li><a href="" target="principal"><span class="mif-eye mif-lg"></span> Instructor</a></li>
-					<li><a href=""><span class="mif-history mif-lg"></span> Historial</a></li>
-                   
+		
+				
+                    <li><a href=""><span class="mif-user-plus mif-lg"></span> Asignacion rol</a></li>
+                    <li><a href=""><span class="mif-history mif-lg"></span> Historial</a></li>
 				</li>
 
 			</ul>

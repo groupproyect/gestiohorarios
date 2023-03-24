@@ -37,11 +37,10 @@ class PersonaController extends Controller
     {
         $nuevo = new persona();
         $nuevo->nombres = $request->nombre_instructor;
-        $nuevo->nombres = $request->apellido_instructor;
-        $nuevo->nombres = $request->nombre_instructor;
-        $nuevo->nombres = $request->correo_instructor;
-        $nuevo->nombres = $request->num_doc;
-        $nuevo2->save();
+        $nuevo->apellidos = $request->apellido_instructor;
+        $nuevo->correo = $request->correo_instructor;
+        $nuevo->num_doc = $request->num_doc;
+        $nuevo->save();
     }
 
     /**
