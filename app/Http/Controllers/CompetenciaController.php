@@ -35,7 +35,7 @@ class CompetenciaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return "comepetenciaController";
     }
 
     /**

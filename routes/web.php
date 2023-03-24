@@ -1,15 +1,20 @@
 <?php
 
 use App\Http\Controllers\AreaController;
-use App\Http\Controllers\loginController;
-use App\Http\Controllers\registroinstruController;
 use App\Http\Controllers\SedeController;
 use App\Http\Controllers\AmbienteFormacionController;
 use App\Http\Controllers\RedTematicaController;
 use App\Http\Controllers\PersonaController;
 use App\Http\Controllers\InstructorController;
+use App\Http\Controllers\HorarioController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthController;
+<<<<<<< HEAD
+=======
+use App\Http\Controllers\ProgramacionController;
+use App\Http\Controllers\Semaforo_CompetenciaController;
+use App\Http\Controllers\CompetenciaController;
+>>>>>>> 281acd474f47711bfa14a288d8c6e14ce1ec1dac
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -84,9 +89,26 @@ Route::post('redtematica/actualizar_redtematica',[RedTematicaController::class,'
 /*-------------------------------------------------------
 RUTAS DE INSTRUCTOR
 --------------------------------------------------------*/
-//Route::get('/instructor', [InstructorController::class , 'index'])->name('mostrar_instructor');
+Route::get('/instructor', [InstructorController::class , 'mostrar'])->name('mostrar_instructor');
 Route::match(['get','post'],'/instructor/crear', [InstructorController::class,'create'] )->name('crear_instructor');
-Route::match(['get','post'],'/ambientes/crear', [InstructorController::class,'store'] )->name('guardar_instructor');
+Route::match(['get','post'],'/instructor/guardar', [InstructorController::class,'store'] )->name('guardar_instructor');
+Route::delete('/instructor/delete/{instructor}',  [InstructorController::class, 'destroy'])->name('eliminar_instructor');
+
+/*-------------------------------------------------------
+RUTAS DE PROGRAMA DE FORMACION
+--------------------------------------------------------*/
+
+
+
+/*-------------------------------------------------------
+RUTAS DE COMPETENCIAS Y RAPS
+--------------------------------------------------------*/
+Route::get('/crear/competencias',function(){
+    return view('horarios.prueba');
+});
+Route::match(['get','post'],'/guardar/competencias', [ProgramacionController::class,'store'] )->name('guardar_competencias');
+Route::match(['get','post'],'/mostrar/competencias', [Semaforo_CompetenciaController::class,'store'] )->name('mostrar_competencia');
+Route::match(['get','post'],'/hacer/competencias', [CompetenciaController::class,'store'] )->name('hacer_competencia');
 /*-------------------------------------------------------
 RUTAS ADICIONALES
 --------------------------------------------------------*/
@@ -106,13 +128,37 @@ RUTA DE INICIO DE SESION
 --------------------------------------------------------*/
 Route::match(['get','post'],'/iniciosesion/crear' ,[UserController::class,'create'])->name('iniciosesion_cre');
 Route::post('/iniciosesion/guardar', [UserController::class, 'store'])->name('guardar_iniciosesion');
-
-
+/*-------------------------------------------------------
+RUTAS DE AUTENTICACION INICIO DE SESION
+--------------------------------------------------------*/
 Route::get('/iniciosesion', [AuthController::class, 'indexusu'])->name('home');
 Route::post('/custom-login', [AuthController::class, 'loginusu'])->name('custom-login');
 Route::get('/logados', [AuthController::class, 'logados'])->name('logados');
 
+
+<<<<<<< HEAD
+Route::get('/iniciosesion', [AuthController::class, 'indexusu'])->name('home');
+Route::post('/custom-login', [AuthController::class, 'loginusu'])->name('custom-login');
+Route::get('/logados', [AuthController::class, 'logados'])->name('logados');
+=======
+/*-------------------------------------------------------
+RUTAS DE AUTENTICACION HORARIO
+--------------------------------------------------------*/
+>>>>>>> 281acd474f47711bfa14a288d8c6e14ce1ec1dac
+
 Route::get('/horario' , function(){ return view('horarios.principal');})->name('horario');
+Route::get('/horario/editar' , function(){ return view('horarios.edicion');})->name('horario_editar');
+
+
 Route::get('/prueba/persona' , [PersonaController::class,'mostrar_person']);
+<<<<<<< HEAD
+=======
+Route::match(['get','post'],'/horario/crear', [HorarioController::class,'prueba'] )->name('prueba_h');
+
+Route::get('/prueba2/horario' , [HorarioController::class,'javascript']);
+
+
+route::post('/actualizar',[InstructorController::class,'update'])->name('actualizarlider');
+>>>>>>> 281acd474f47711bfa14a288d8c6e14ce1ec1dac
 
 

@@ -1,4 +1,4 @@
-@extends("../plantillas/areas")
+@extends("../plantillas/vistas")
 @section('inicial_titulo','Sedes')
 @section('titulo')
 <div id="titulo">       
@@ -28,7 +28,7 @@
                         @csrf
                        @method('delete')
 
-                       <button type="submit" class="boton"><img src="..\resources\img\papelera.png" alt="icono de eliminar"></button> </div> 
+                       <button type="submit" class="boton" onclick="return alert()"><img src="..\resources\img\papelera.png" alt="icono de eliminar"></button> </div> 
                    </form>
                   </td>
                    </div>
@@ -48,7 +48,23 @@
         </div>
         
 @endsection
-     
+@section('js')
+<script>
+        /*------------------------------------------
+           Esta es una funcion para las alertas 
+           de eliminacion en un registro 
+        -------------------------------------------*/
+        function alert(){
+            var resultado = window.confirm('Estas seguro de eliminar?');
+          if (resultado === true) {
+               return true;
+             
+            } else { 
+               return false;
+            }
+        }
+     </script>
+@endsection   
 
 
 

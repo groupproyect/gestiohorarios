@@ -16,8 +16,10 @@ return new class extends Migration
         Schema::create('ambiente_formacions', function (Blueprint $table) {
             $table->integer('aforo');
             $table->string('id_ambiente',3)->primary();
-            $table->foreignId('id_area')->onUpdate('cascade')->onDelete('cascade')->constrained('areas');
-            $table->foreignId('id_sede')->onUpdate('cascade')->onDelete('cascade')->constrained('sedes');
+            $table->unsignedBigInteger('id_area');
+            $table->unsignedBigInteger('id_sede');
+            $table->foreign('id_area')->references('id')->on('areas')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('id_sede')->references('id')->on('sedes')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

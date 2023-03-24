@@ -12,7 +12,7 @@
         @if(empty($inicio))
         <br>
             <label>
-                <h4>Nombre </h4> 
+                <h4>Nombre_usuario</h4> 
                 <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}">
               @error('Nombre')
                  <span class="invalid-feedback">
@@ -22,7 +22,7 @@
             </label>
             <br>
             <label>
-                <h4>Email</h4> 
+                <h4>Email_usuario</h4> 
                 <input type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}">
               @error('Email')
                  <span class="invalid-feedback">
@@ -32,14 +32,14 @@
             </label>
             <br>
                 <label>
-                    <h4>Contraseña</h4> 
+                    <h4>Contraseña_usuario</h4> 
                     <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" value="{{ old('password') }}">
                     @error('Contraseña')
                     <span class="invalid-feedback">
                          <strong>{{ $message }}</strong>
                     </span>
                     @enderror
-                </label>
+                </label> 
                 @else
         
       @endif
