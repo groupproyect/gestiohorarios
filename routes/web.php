@@ -12,6 +12,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProgramacionController;
 use App\Http\Controllers\Semaforo_CompetenciaController;
 use App\Http\Controllers\CompetenciaController;
+use App\Http\Controllers\FichaController;
+use App\Http\Controllers\ProgramaFormacionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,8 +26,25 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+/*-------------------------------------------------------
+RUTA DE PROGRAMACION
+--------------------------------------------------------*/
+Route::get('/programacion', [ProgramacionController::class , 'index'])->name('mostrar_programacion');
+Route::get('/programacion/crear', [ProgramacionController::class , 'create'])->name('crear_programacion');
 
+/*-------------------------------------------------------
+RUTAS DE PROGRAMA FORMACIÓN 
+--------------------------------------------------------*/
 
+Route::get('/pf', [ProgramaFormacionController::class , 'index'])->name('mostrar_programaformacion');
+
+Route::match(['get','post'],'/pf/crear', [ProgramaFormacionController::class, 'create'])->name('crear_programaformacion');
+Route::post('/pf/guardar', [ProgramaFormacionController::class, 'store'])->name('guardar_programaformacion');
+
+Route::get('/pf/editar_programaformacion/{id}',[ProgramaFormacionController::class,'editar'])->name('editar_programaformacion');
+Route::post('pf/actualizar_programaformacion',[ProgramaFormacionController::class,'update'])->name('actualizar_programaformacion');
+
+ Route::delete('/pf/delete/{e}',  [ProgramaFormacionController::class, 'destroy'])->name('eliminar_programaformacion');
 /*-------------------------------------------------------
 RUTAS DE SEDE 
 --------------------------------------------------------*/
@@ -123,8 +142,9 @@ Route::get('/principal', function () {
 /*-------------------------------------------------------
 RUTA DE INICIO DE SESION
 --------------------------------------------------------*/
-Route::match(['get','post'],'/iniciosesion/crear' ,[UserController::class,'create'])->name('iniciosesion_cre');
-Route::post('/iniciosesion/guardar', [UserController::class, 'store'])->name('guardar_iniciosesion');
+
+Route::match(['get','post'],'/registrosesion/crear' ,[UserController::class,'create'])->name('iniciosesion_cre');
+Route::post('/registrosesion/guardar', [UserController::class, 'store'])->name('guardar_registrosesion');
 /*-------------------------------------------------------
 RUTAS DE AUTENTICACION INICIO DE SESION
 --------------------------------------------------------*/
@@ -150,3 +170,7 @@ Route::get('/prueba2/horario' , [HorarioController::class,'javascript']);
 route::post('/actualizar',[InstructorController::class,'update'])->name('actualizarlider');
 
 
+Route::get('/ficha',[FichaController::class,'index'])->name('mostrar_fichas');
+
+Route::match(['get','post'],'/ficha/crear', [FichaController::class,'create'] )->name('crear_ficha');
+Route::match(['get','post'],'/ficha/guardar', [FichaController::class,'store'] ) ->name('guardar_ficha');

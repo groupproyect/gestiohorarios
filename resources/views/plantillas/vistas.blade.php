@@ -29,10 +29,11 @@
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
+          background-color: #e1ddbf;
           }
         #titulo{
         margin-top:25px;
-        font-family: 'Quicksand', sans-serif;
+      font-family: "LeJeuneDeck-Regular", Times, serif; 
          text-align: center;
       
          color:black;
@@ -90,6 +91,7 @@
           font-size: 25px;
           color:white;
           text-align: center;
+           font-family: "Cormorant",Georgia,"Times New Roman",Times,serif;
         }
 
         #agregarimg{

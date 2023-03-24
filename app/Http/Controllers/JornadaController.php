@@ -82,4 +82,10 @@ class JornadaController extends Controller
     {
         //
     }
+
+    public function mostrarj(){
+        $lista = jornada::orderby('id','asc')->get();
+        return $lista;
+        
+    }
 }

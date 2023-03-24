@@ -8,7 +8,9 @@ use App\Models\area;
 use App\Models\ficha;
 use App\Models\ambiente_formacion;
 use App\Models\instructor;
+use App\Models\nivel_formacion;
 use App\Models\persona;
+use App\Models\programa_formacion;
 use App\Models\red_tematica;
 use App\Models\tipo_contrato;
 use App\Models\User;
@@ -23,7 +25,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-       
+       /*
         red_tematica::insert([
             [
                 'id'=> 1,
@@ -144,13 +146,71 @@ class DatabaseSeeder extends Seeder
                 'num_doc'=>'5373953563',
                 'id_contrato'=>1,
             ]);
-                
-            User::factory(2)->create();
-                                            
+    
+                 
             User::factory()->create([
                 'name' => 'Test User',
                 'email' => 'test@example.com',
                 'password' => 'holamundo1234'
             ]);
+                 
+            User::factory()->create([
+                'name' => 'ccoordinador',
+                'email' => 'coordinador@cide.com',
+                'password' => 'soylomejor'
+            ]);
+            User::factory()->create([
+                'name' => 'ximena',
+                'email' => 'ximena171531@gmail.com',
+                'password' => 'mena'
+            ]);*/
+
+            red_tematica::insert([
+                [
+                    'id'=> 1,
+                    'descripcion'=>'Tecnologia',
+                    
+                ],
+                  
+                [
+                    'id'=> 2,
+                    'descripcion'=>'Contabilidad',
+                    
+                    
+                ],
+                [  
+                    'id'=>3,
+                    'descripcion'=>'Comercio',
+                    
+                    
+                ]]
+            
+                );
+            area::insert([
+                'id'=>1,
+                'id_red'=> 1,
+                'descripcion'=>'software'
+           ]);
+
+            nivel_formacion::insert([
+                'id'=>1,
+                'descripcion'=>'Tecnologo',
+              ],[
+                'id'=>2,
+                'descripcion'=>'Tecnico',
+              ]
+            );
+
+           programa_formacion::insert([
+            'codigo_prog'=>'228106',
+            'nombre'=>'ADSI',
+            'version'=>102,
+            'duracion'=>'24 meses',
+            'estado'=>1,
+            'id_area'=>1,
+            'id_niv_formacion'=>1,
+          ]
+        );
+        
     }
 }
