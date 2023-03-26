@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\nivel_formacion;
+use App\Models\semaforo;
 use Illuminate\Http\Request;
 
-class NivelFormacionController extends Controller
+class ProgramacionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -35,16 +35,16 @@ class NivelFormacionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return $request;
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\nivel_formacion  $nivel_formacion
+     * @param  \App\Models\semoforo  $semoforo
      * @return \Illuminate\Http\Response
      */
-    public function show(nivel_formacion $nivel_formacion)
+    public function show(semoforo $semoforo)
     {
         //
     }
@@ -52,10 +52,10 @@ class NivelFormacionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\nivel_formacion  $nivel_formacion
+     * @param  \App\Models\semoforo  $semoforo
      * @return \Illuminate\Http\Response
      */
-    public function edit(nivel_formacion $nivel_formacion)
+    public function edit(semoforo $semoforo)
     {
         //
     }
@@ -64,10 +64,10 @@ class NivelFormacionController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\nivel_formacion  $nivel_formacion
+     * @param  \App\Models\semoforo  $semoforo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, nivel_formacion $nivel_formacion)
+    public function update(Request $request, semoforo $semoforo)
     {
         //
     }
@@ -75,16 +75,12 @@ class NivelFormacionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\nivel_formacion  $nivel_formacion
+     * @param  \App\Models\semoforo  $semoforo
      * @return \Illuminate\Http\Response
      */
-    public function destroy(nivel_formacion $nivel_formacion)
+    public function destroy(semoforo $semoforo)
     {
         //
     }
-    public function mostrarNivelFormacion(){
-        $niv = nivel_formacion::orderby('id','asc')->get();
-        return $niv;
-        
-    }
+    
 }

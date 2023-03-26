@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../resources\css\estilo_tablita.css">
-    <title>AREAS</title>
     
 </head>
 <body>
@@ -43,9 +42,9 @@
           <td><h5>ficha</h5></td>
           <td >
             <div class="td_dia">
-              <div class="dia" id="0.{{$i}}.0" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="origen(event)">
+              <div class="dia" id="0.{{$i}}.0.dia" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="origen(event)">
                 <select name="competencia_lunes[]" id="0.{{$i}}.0.s" draggable="false" onclick="opcion(event)" >
-                  <option disabled selected>debe escoger competencia</option>
+                  <option id="0.{{$i}}.0.null" class="" value="">debe escoger competencia</option>>
                   <option value="1" id="0.{{$i}}.0.0" class="0.{{$i}}.0.s" >construir</option>
                   <option value="2" id="0.{{$i}}.0.1" class="0.{{$i}}.1.s" >analizar</option>
                   <option value="3" id="0.{{$i}}.0.2" class="0.{{$i}}.2.s">implementar</option>
@@ -57,9 +56,9 @@
             <div id="dia1"></div>
           </td>
           <td>
-            <div class="dia" id="0.{{$i}}.1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="dia" id="0.{{$i}}.1.dia" ondrop="drop(event)" ondragover="allowDrop(event)">
               <select name="competencia_martes[]" id="0.{{$i}}.1.s" draggable="false" onclick="opcion(event)" >
-                <option disabled selected>debe escoger competencia</option>
+                <option id="0.{{$i}}.1.null" class="" value="">debe escoger competencia</option>
                 <option value="1" id="0.{{$i}}.1.0" class="0.{{$i}}.0.s" >construir</option>
                 <option value="2" id="0.{{$i}}.1.1" class="0.{{$i}}.1.s" >analizar</option>
                 <option value="3" id="0.{{$i}}.1.2" class="0.{{$i}}.2.s">implementar</option>
@@ -69,9 +68,9 @@
             </div>
           </td>
           <td>
-            <div class="dia" id="0.{{$i}}.2" ondrop="drop(event)" ondragover="allowDrop(event)" >
-              <select name="competencia_miercoles[]" id="0.{{$i}}.2.s" draggable="false" onclick="opcion(event)" >
-                <option disabled selected>debe escoger competencia</option> 
+            <div class="dia" id="0.{{$i}}.2.dia" ondrop="drop(event)" ondragover="allowDrop(event)" >
+              <select  name="competencia_miercoles[]" id="0.{{$i}}.2.s" draggable="false" onclick="opcion(event)" >
+                <option id="0.{{$i}}.2.null" class="" value="">debe escoger competencia</option>
                 <option value="1" id="0.{{$i}}.2.0" class="0.{{$i}}.0.s" >construir</option>
                 <option value="2" id="0.{{$i}}.2.1" class="0.{{$i}}.1.s" >analizar</option>
                 <option value="3" id="0.{{$i}}.2.2" class="0.{{$i}}.2.s">implementar</option>
@@ -81,9 +80,9 @@
             </div>
           </td>
           <td>
-            <div class="dia" id="0.{{$i}}.3" ondrop="drop(event)" ondragover="allowDrop(event)">
-              <select name="competencia_jueves[]" id="0.{{$i}}.3.s" draggable="false" onclick="opcion(event)" >
-                <option disabled selected>debe escoger competencia</option>
+            <div class="dia" id="0.{{$i}}.3.dia" ondrop="drop(event)" ondragover="allowDrop(event)">
+              <select  name="competencia_jueves[]" id="0.{{$i}}.3.s" draggable="false" onclick="opcion(event)" >
+                <option id="0.{{$i}}.3.null" class="" value="">debe escoger competencia</option>
                 <option value="1" id="0.{{$i}}.3.0" class="0.{{$i}}.0.s" >construir</option>
                 <option value="2" id="0.{{$i}}.3.1" class="0.{{$i}}.1.s" >analizar</option>
                 <option value="3" id="0.{{$i}}.3.2" class="0.{{$i}}.2.s">implementar</option>
@@ -93,9 +92,9 @@
             </div>
           </td>
           <td>
-            <div class="dia" id="0.{{$i}}.4" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="dia" id="0.{{$i}}.4.dia" ondrop="drop(event)" ondragover="allowDrop(event)">
               <select name="competencia_viernes[]" id="0.{{$i}}.4.s" draggable="false" onclick="opcion(event)" >
-                <option disabled selected>debe escoger competencia</option>
+              <option id="0.{{$i}}.4.null" class="" value="">debe escoger competencia</option>
                 <option value="1" id="0.{{$i}}.4.0" class="0.{{$i}}.0.s" >construir</option>
                 <option value="2" id="0.{{$i}}.4.1" class="0.{{$i}}.1.s" >analizar</option>
                 <option value="3" id="0.{{$i}}.4.2" class="0.{{$i}}.2.s">implementar</option>
@@ -115,12 +114,13 @@
       <tr class="mini_cuadritos" style="background:darkseagreen;">
           <td><h5>ficha</h5></td>
           <td>
-            <div class="dia" id="1.{{$i}}.0" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="origen(event)">
+            <div class="dia" id="1.{{$i}}.0.dia" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="origen(event)">
               
-              <select name="competencia_lunes[]" id="1.{{$i}}.0.s" draggable="false" onclick="opcion(event)" >
-                <option disabled selected>debe escoger competencia</option>
+              <select  name="competencia_lunes[]" id="1.{{$i}}.0.s" draggable="false" onclick="opcion(event)" >
+                <option id="1.{{$i}}.0.null" class="" value="">debe escoger competencia</option>
                 <option value="1" id="1.{{$i}}.0.0" class="1.{{$i}}.0.s" >construir</option>
                 <option value="1" id="1.{{$i}}.0.01" class="1.{{$i}}.01.s" >construir</option>
+                <option value="1" id="1.{{$i}}.0.02" class="1.{{$i}}.02.s" >construir</option>
                 <option value="2" id="1.{{$i}}.0.1" class="1.{{$i}}.1.s" >analizar</option>
                 <option value="3" id="1.{{$i}}.0.2" class="1.{{$i}}.2.s">implementar</option>
                 <option value="4" id="1.{{$i}}.0.3" class="1.{{$i}}.3.s"  >Diseñar</option>
@@ -129,11 +129,12 @@
             </div>
           </td>
           <td>
-            <div class="dia" id="1.{{$i}}.1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="dia" id="1.{{$i}}.1.dia" ondrop="drop(event)" ondragover="allowDrop(event)">
               <select name="competencia_martes[]" id="1.{{$i}}.1.s" draggable="false" onclick="opcion(event)" >
-                <option disabled selected>debe escojer competencia</option>
+                <option id="1.{{$i}}.1.null" class="" value="">debe escoger competencia</option>
                 <option value="1" id="1.{{$i}}.1.0" class="1.{{$i}}.0.s" >construir</option>
                 <option value="1" id="1.{{$i}}.1.01" class="1.{{$i}}.01.s" >construir</option>
+                <option value="1" id="1.{{$i}}.1.02" class="1.{{$i}}.02.s" >construir</option>
                 <option value="2" id="1.{{$i}}.1.1" class="1.{{$i}}.1.s" >analizar</option>
                 <option value="3" id="1.{{$i}}.1.2" class="1.{{$i}}.2.s">implementar</option>
                 <option value="4" id="1.{{$i}}.1.3" class="1.{{$i}}.3.s"  >Diseñar</option>
@@ -142,11 +143,12 @@
             </div>
           </td>
           <td>
-            <div class="dia" id="1.{{$i}}.2" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="dia" id="1.{{$i}}.2.dia" ondrop="drop(event)" ondragover="allowDrop(event)">
               <select name="competencia_miercoles[]" id="1.{{$i}}.2.s" draggable="false" onclick="opcion(event)" >
-                <option disabled selected>debe escoger competencia</option>
+                <option  id="1.{{$i}}.2.null" class="" value="">debe escoger competencia</option>
                 <option value="1" id="1.{{$i}}.2.0" class="1.{{$i}}.0.s" >construir</option>
                 <option value="1" id="1.{{$i}}.2.01" class="1.{{$i}}.01.s" >construir</option>
+                <option value="1" id="1.{{$i}}.2.02" class="1.{{$i}}.02.s" >construir</option>
                 <option value="2" id="1.{{$i}}.2.1" class="1.{{$i}}.1.s" >analizar</option>
                 <option value="3" id="1.{{$i}}.2.2" class="1.{{$i}}.2.s">implementar</option>
                 <option value="4" id="1.{{$i}}.2.3" class="1.{{$i}}.3.s"  >Diseñar</option>
@@ -155,11 +157,12 @@
             </div>
           </td>
           <td>
-            <div class="dia" id="1.{{$i}}.3" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="dia" id="1.{{$i}}.3.dia" ondrop="drop(event)" ondragover="allowDrop(event)">
               <select name="competencia_jueves[]" id="1.{{$i}}.3.s" draggable="false" onclick="opcion(event)" >
-                <option disabled selected>debe escoger competencia</option>
+                <option id="1.{{$i}}.3.null" class="" value="">debe escoger competencia</option>
                 <option value="1" id="1.{{$i}}.3.0" class="1.{{$i}}.0.s" >construir</option>
                 <option value="1" id="1.{{$i}}.3.01" class="1.{{$i}}.01.s" >construir</option>
+                <option value="1" id="1.{{$i}}.3.02" class="1.{{$i}}.02.s" >construir</option>
                 <option value="2" id="1.{{$i}}.3.1" class="1.{{$i}}.1.s" >analizar</option>
                 <option value="3" id="1.{{$i}}.3.2" class="1.{{$i}}.2.s">implementar</option>
                 <option value="4" id="1.{{$i}}.3.3" class="1.{{$i}}.3.s"  >Diseñar</option>
@@ -168,12 +171,12 @@
             </div>
           </td>
           <td>
-            <div class="dia" id="1.{{$i}}.4" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="dia" id="1.{{$i}}.4.dia" ondrop="drop(event)" ondragover="allowDrop(event)">
               <select name="competencia_viernes[]" id="1.{{$i}}.4.s" draggable="false" onclick="opcion(event)" >
-                <option disabled selected>debe escoger competencia</option>
+                <option id="1.{{$i}}.4.null" class="">debe escoger competencia</option>
                 <option value="1" id="1.{{$i}}.4.0" class="1.{{$i}}.0.s" >construir</option>
                 <option value="1" id="1.{{$i}}.4.01" class="1.{{$i}}.01.s" >construir</option>
-                <option value="2" id="1.{{$i}}.4.1" class="1.{{$i}}.1.s" >analizar</option>
+                <option value="1" id="1.{{$i}}.4.02" class="1.{{$i}}.02.s" >construir</option>
                 <option value="3" id="1.{{$i}}.4.2" class="1.{{$i}}.2.s">implementar</option>
                 <option value="4" id="1.{{$i}}.4.3" class="1.{{$i}}.3.s"  >Diseñar</option>
               </select>
@@ -199,40 +202,40 @@
       <table class="cajainstru1" border="0" style="border-color: #e1ddbf;" > 
         <tr  style="border-color: #e1ddbf;"  border="0">
           <td style="background-color: #e1ddbf; "><div class="caja1" draggable="true" ondragstart="drag(event)" id="cajita.{{$o}}"><h1>Adriana Espitia</h1></div></td>
-          <td style="background-color: #e1ddbf;"><div class="drop" id="{{$o}}" ondrop="drop2(event)" ondragover="allowDrop(event)"></div></td>
+          <td style="background-color: #e1ddbf;"><div class="drop" id="{{$o}}.cont" ondrop="drop2(event)" ondragover="allowDrop(event)"></div></td>
           
         </tr>
       </table>
         
-      <table  class="cajainstru1" border="0">
+      <table class="cajainstru1" border="0" style="border-color: #e1ddbf;" >
         <tr>
           <td style="background-color: #e1ddbf;"><div class="caja1" draggable="true" ondragstart="drag(event)" id="cajita1.{{$o}}"><h1>Arlenys Nieves</h1></div></td>
-          <td><div style="background-color: #e1ddbf;" class="drop" id="{{$o}}" ondrop="drop2(event)" ondragover="allowDrop(event)"></div></td>
+          <td><div style="background-color: #e1ddbf;" class="drop" id="{{$o}}.cont" ondrop="drop2(event)" ondragover="allowDrop(event)"></div></td>
         </tr>
       </table>
 
-      <table  class="cajainstru1" border="0">
+      <table class="cajainstru1" border="0" style="border-color: #e1ddbf;" >
         <tr>
           <td style="background-color: #e1ddbf;"><div class="caja1" draggable="true" ondragstart="drag(event)" id="cajita2.{{$o}}"><h1>Miguel Gomez</h1></div></td>
-          <div style="background-color: #e1ddbf;" class="drop" id="{{$o}}" ondrop="drop2(event)" ondragover="allowDrop(event)"></div></td>
+          <td><div style="background-color: #e1ddbf;" class="drop" id="{{$o}}.cont" ondrop="drop2(event)" ondragover="allowDrop(event)"></div></td>
         </tr>
       </table>
-      <table  class="cajainstru1" border="0">
+      <table class="cajainstru1" border="0" style="border-color: #e1ddbf;" >
         <tr>
           <td  style="background-color: #e1ddbf;"><div class="caja1" draggable="true" ondragstart="drag(event)" id="cajita3.{{$o}}"><h1>Evelio Chaparro </h1></div></td>
-          <div style="background-color: #e1ddbf;" class="drop" id="{{$o}}" ondrop="drop2(event)" ondragover="allowDrop(event)"></div> </td>
+          <td><div style="background-color: #e1ddbf;" class="drop" id="{{$o}}.cont" ondrop="drop2(event)" ondragover="allowDrop(event)"></div> </td>
         </tr>
       </table>
-      <table  class="cajainstru1" border="0">
+      <table class="cajainstru1" border="0" style="border-color: #e1ddbf;" >
         <tr >
           <td style="background-color: #e1ddbf;"> <div class="caja1" draggable="true" ondragstart="drag(event)" id="cajita4.{{$o}}"><h1>Alexander</h1></div></td>
-          <td><div style="background-color: #e1ddbf;" class="drop" id="{{$o}}" ondrop="drop2(event)" ondragover="allowDrop(event)"></div></td>
+          <td><div style="background-color: #e1ddbf;" class="drop" id="{{$o}}.cont" ondrop="drop2(event)" ondragover="allowDrop(event)"></div></td>
         </tr>
       </table>
-      <table  class="cajainstru1" border="0">
+      <table class="cajainstru1" border="0" style="border-color: #e1ddbf;" >
         <tr>
           <td style="background-color: #e1ddbf;"> <div class="caja1" draggable="true" ondragstart="drag(event)" id="cajita5.{{$o}}"><h1>Samuel Padilla</h1></div></td>
-          <td><div style="background-color: #e1ddbf;" class="drop" id="{{$o}}" ondrop="drop2(event)" ondragover="allowDrop(event)"></div></td>
+          <td><div style="background-color: #e1ddbf;" class="drop" id="{{$o}}.cont" ondrop="drop2(event)" ondragover="allowDrop(event)"></div></td>
         </tr>
       </table>
 
@@ -279,8 +282,7 @@
   function drag(ev){
 
     ev.dataTransfer.setData("text", ev.target.id)
-    ev.dataTransfer.setData("padre", ev.target.parentNode.id)
-    console.log("este es el padre: "+ ev.target.parentNode.id)
+   
       
   }
 
@@ -303,37 +305,24 @@
         
       }
     }
-
-    if(bandera == false){
-      
-      for (let a = 0; a < array.length; a++) {
-        
-        for (let b = 0; b < array.length; b++) {
-          
-          let val = array[a][b].indexOf(dato.join("."));
-          
-          if(val != -1){
-            bandera = [a,b,val];
-          } 
-        }
-      }
-    }
-    
     let respuesta = bandera;
     console.log(respuesta)
     return respuesta;
   }
 
+  
+
   var array = [[["","","","",""],["","","","",""]],[["","","","",""],["","","","",""]]];
 
   //array.length=0;
+
   function drop(ev){
 
     let evento;
     let coordenada;
     let data;
     
-    if(Array.isArray(ev) === true){
+    if(Array.isArray(ev) == true){
       evento = document.getElementById(ev[0]);
       data = ev[1];
       
@@ -354,43 +343,50 @@
       let dato = data.split(".");
       let posicion = trae(dato,v,h,z);
       console.log("esta es la posicion: "+posicion)
-      console.log(ev)
+    
 
       if(posicion == false){
-
+        console.log("verificando!!!!!!")
         array[v][h][z] = data;
-        evento.appendChild(document.getElementById(data))
-        let instructores = document.getElementById('instructor_' + v + "." + h + "." + z);
-        instructores.setAttribute('value',dato[0]);
-        
-        //return para la funcion append
-        if(Array.isArray(ev) === true){
-          return false;  
-        }
-        
-      }else if (posicion == true ){
-        if(Array.isArray(ev) === true){
-          return true;  
-        }
-      }else{
+        let objeto = document.getElementById(data);
+        let parent = objeto.parentNode.id.split(".");
+        let instructores;
+       
+        if(parent.length != 1){
+          if(Array.isArray(ev) == false){
+            
+            if(parent[parent.length-1] == "dia"){
 
-        array[posicion[0]][posicion[1]][posicion[2]]="";
-        let instructores = document.getElementById('instructor_' + posicion[0] + "." + posicion[1] + "." + posicion[2]);
-        instructores.setAttribute('value',"");
-        array[v][h][z] = data;
+              array[parent[0]][parent[1]][parent[2]]="";
+              console.log("contenido: "+array[parent[0]][parent[1]][parent[2]])
+              instructores = document.getElementById('instructor_' + parent[0] + "." + parent[1] + "." + parent[2] );
+              instructores.setAttribute('value',"");
+
+            }
+          }
+          if(parent[parent.length-1] == "cont"){
+            array2[parent[0]]="";
+          }
+        }
         evento.appendChild(document.getElementById(data));
+        array[v][h][z]=data;
         instructores = document.getElementById('instructor_' + v + "." + h + "." + z );
         instructores.setAttribute('value',dato[0]);
-        console.log("el array: " + array);
-
-        //return para la funcion append
-        if(Array.isArray(ev) === true){
-          return false;  
+        if(Array.isArray(ev) == false){
+          append(dato,v,h,z);
         }
+        // retorno para validacion en la funcion append
+        return false;
+      }else if (posicion == true ){  
         
-        
-      }            
-
+        // retorno para validacion en la funcion append
+        if(Array.isArray(ev) == false){
+          window.alert("ese instructor ya ha sido asignado a esta jornada")
+        }
+        return true;
+      }
+    }else{
+      return array[v][h][z];
     }
   } 
 
@@ -398,33 +394,26 @@
 
   function drop2(ev){
     console.log("funcion drop 2")
+
     if(array2[parseInt(ev.target.id)]==""){
       
       let data=ev.dataTransfer.getData("text");
-      let bandera = false;
-      
-      for (let a = 0; a < array.length; a++) {
-        for (let b = 0; b < array[a].length; b++) {
-          let co
-          
+      let objeto = document.getElementById(data);
+      let parent = objeto.parentNode.id.split(".");
+      if(parent.length !=1){
+        if(parent[parent.length-1] == "dia"){
+
+          array[parent[0]][parent[1]][parent[2]]="";
+          let instructores = document.getElementById('instructor_' + parent[0] + "." + parent[1] + "." + parent[2] );
+          instructores.setAttribute('value',"");
+
         }
-        
+        if(parent[parent.length-1] == "cont"){
+          array2[parent[0]]="";
+        }
       }
-      let posicion=array2.indexOf(data)
-      
-      if(posicion == -1){
-
-        array2[parseInt(ev.target.id)] = data;
-        ev.target.appendChild(document.getElementById(data))
-
-      }else{
-
-        array2[posicion]="";
-        array2[parseInt(ev.target.id)] = data;
-        ev.target.appendChild(document.getElementById(data))
-      
-      }            
-
+      ev.target.appendChild(document.getElementById(data));
+    
     }  
                   
   }
@@ -470,7 +459,9 @@ FUNCION PARA VERIFICAR COMPETENCIA POR FICHA
       console.log("pidiendo la opcion")
       let value = document.getElementById(lista.options[lista.selectedIndex].id);
       console.log("pidiendo id de la opcion")
+      console.log(value)
       let c = value.getAttribute('id').split(".");
+      
       let tipo = value.getAttribute('class');
       let valor = value.getAttribute('value');
       let posicion = opciones[c[0]][c[1]][c[2]];
@@ -512,30 +503,65 @@ FUNCION PARA VERIFICAR COMPETENCIA POR FICHA
     console.log("la opciones estan asi: "+opciones)
     console.log("la opciones estan asi: "+valores)
   }
-  const append = (valor)=>{
-    for (let a = 0; a < array.length; a++) {
-      for (let b = 0; b < array[a].length; b++) {
-        for (let c = 0; c < array[a][b].length; c++) {
-          if (array[a][b][c] != "" && valores[a][b][c] != "") {
+  //t= tipo | v=id array jornada | h=dia | z=ficha | 
+  const dias=(v,h,t)=>{
+    // j = jornada | d = dia
+    let j = ["mañana","tarde"];
+    let d = ["lunes","martes","miercoles","jueves","viernes"]
+    if(t=="j"){
+      return j[v];
+    }else{
+      return d[h]
+    }
 
-            for (let d = 0; d < valores.length; d++) {
-              
-              if(valores[a][b][c] == valores[a][b][d] && d != c){
-                
-              }
-                  
-                
-                
-              
-              
-            }
-            
-          }
-          
-        }
-        
-      }
+  }
+  function append(dato,v,h,z){
+    let op_igual=[];
+    if (valores[v][h][z] != '') {
       
+      for (let a = 0; a < array[v][h].length; a++) {
+        if (z != a && valores[v][h][z]==valores[v][h][a]) {
+          //clase de los div de instructor
+          op_igual.push([v,h,a].join(".")+".dia");
+          console.log("guardando: "+[v,h,a].join(".")+".dia")
+        }
+      }
+      if (op_igual.length > 0 ) {
+        let caja1 = document.getElementsByClassName("caja1");
+        let a = 0;
+        for(let b = 0; b < caja1.length; b++){
+          let element = caja1[b];
+          console.log(caja1[b])
+          let parent = element.parentNode.id.split(".");
+          console.log("guardando elemento");
+
+          if(parent[parent.length-1] == "cont" || parent.length == 1){
+            let temp2 = element.id.split(".");
+            let flag;
+            if (temp2[0] == dato[0] && a < op_igual.length) {
+              flag = drop([op_igual[a],element.id]);
+              if (flag == true) {
+                let tem = op_igual[a].split(".");
+                window.alert("el instructor no puede cubrir la competencia el dia "+dias(tem[0],tem[2],"d") + ". Ya ha sido asignado en esta jornada")
+              }else if(flag == false){
+                a++
+              }else{
+                let tem = flag.split(".");
+                if(tem[0] == dato[0]){
+                  a++
+                }
+              }
+
+            }
+          }
+        }
+        console.log("la cantidad de a es: " + a)
+        console.log("la cantidad a igualar es: "+op_igual.length)
+        console.log(op_igual.length > a)
+        if (a < op_igual.length) {
+          window.alert("la cantidad de momentos disponibles del instructor no son suficientes para cubrir la competencia")
+        }
+      }
     }
   }
 
@@ -561,7 +587,7 @@ FUNCION PARA VERIFICAR COMPETENCIA POR FICHA
 
   #contelist::-webkit-scrollbar{
     width: 10px;
-    background-color::#babebf;
+    background-color:#babebf;
     border-radius:10px;
   }
 
