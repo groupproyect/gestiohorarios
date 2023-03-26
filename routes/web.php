@@ -27,8 +27,25 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+/*-------------------------------------------------------
+RUTA DE PROGRAMACION
+--------------------------------------------------------*/
+Route::get('/programacion', [ProgramacionController::class , 'index'])->name('mostrar_programacion');
+Route::get('/programacion/crear', [ProgramacionController::class , 'create'])->name('crear_programacion');
 
+/*-------------------------------------------------------
+RUTAS DE PROGRAMA FORMACIÓN 
+--------------------------------------------------------*/
 
+Route::get('/pf', [ProgramaFormacionController::class , 'index'])->name('mostrar_programaformacion');
+
+Route::match(['get','post'],'/pf/crear', [ProgramaFormacionController::class, 'create'])->name('crear_programaformacion');
+Route::post('/pf/guardar', [ProgramaFormacionController::class, 'store'])->name('guardar_programaformacion');
+
+Route::get('/pf/editar_programaformacion/{id}',[ProgramaFormacionController::class,'editar'])->name('editar_programaformacion');
+Route::post('pf/actualizar_programaformacion',[ProgramaFormacionController::class,'update'])->name('actualizar_programaformacion');
+
+ Route::delete('/pf/delete/{e}',  [ProgramaFormacionController::class, 'destroy'])->name('eliminar_programaformacion');
 /*-------------------------------------------------------
 RUTAS DE SEDE 
 --------------------------------------------------------*/
@@ -126,8 +143,12 @@ Route::get('/principal', function () {
 /*-------------------------------------------------------
 RUTA DE INICIO DE SESION
 --------------------------------------------------------*/
-Route::match(['get','post'],'/iniciosesion/crear' ,[UserController::class,'create'])->name('iniciosesion_cre');
-Route::post('/iniciosesion/guardar', [UserController::class, 'store'])->name('guardar_iniciosesion');
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5c15d8216d96dc9219a6cdc4656f024222a6be94
+Route::match(['get','post'],'/registrosesion/crear' ,[UserController::class,'create'])->name('iniciosesion_cre');
+Route::post('/registrosesion/guardar', [UserController::class, 'store'])->name('guardar_registrosesion');
 /*-------------------------------------------------------
 RUTAS DE AUTENTICACION INICIO DE SESION
 --------------------------------------------------------*/
@@ -136,29 +157,33 @@ Route::post('/custom-login', [AuthController::class, 'loginusu'])->name('custom-
 Route::get('/logados', [AuthController::class, 'logados'])->name('logados');
 
 
-<<<<<<< HEAD
+<<<<<<<<< Temporary merge branch 1
 Route::get('/iniciosesion', [AuthController::class, 'indexusu'])->name('home');
 Route::post('/custom-login', [AuthController::class, 'loginusu'])->name('custom-login');
 Route::get('/logados', [AuthController::class, 'logados'])->name('logados');
-=======
+=========
 /*-------------------------------------------------------
 RUTAS DE AUTENTICACION HORARIO
 --------------------------------------------------------*/
->>>>>>> 281acd474f47711bfa14a288d8c6e14ce1ec1dac
+>>>>>>>>> Temporary merge branch 2
 
 Route::get('/horario' , function(){ return view('horarios.principal');})->name('horario');
 Route::get('/horario/editar' , function(){ return view('horarios.edicion');})->name('horario_editar');
 
 
 Route::get('/prueba/persona' , [PersonaController::class,'mostrar_person']);
-<<<<<<< HEAD
-=======
+<<<<<<<<< Temporary merge branch 1
+=========
 Route::match(['get','post'],'/horario/crear', [HorarioController::class,'prueba'] )->name('prueba_h');
 
 Route::get('/prueba2/horario' , [HorarioController::class,'javascript']);
 
 
 route::post('/actualizar',[InstructorController::class,'update'])->name('actualizarlider');
->>>>>>> 281acd474f47711bfa14a288d8c6e14ce1ec1dac
+>>>>>>>>> Temporary merge branch 2
 
 
+Route::get('/ficha',[FichaController::class,'index'])->name('mostrar_fichas');
+
+Route::match(['get','post'],'/ficha/crear', [FichaController::class,'create'] )->name('crear_ficha');
+Route::match(['get','post'],'/ficha/guardar', [FichaController::class,'store'] ) ->name('guardar_ficha');

@@ -21,9 +21,10 @@ return new class extends Migration
             $table->integer('trimestre');
             $table->date('inicio_formacion');
             $table->date('fin_formacion');
+            $table->unsignedBigInteger('id_jornada');
             $table->boolean('estado')->default(true);
             $table->foreign('codigo_prog')->references('codigo_prog')->on('programa_formacions')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('id_jornada')->onUpdate('cascade')->onDelete('cascade')->constrained('jornadas');
+            $table->foreign('id_jornada')->references('id')->on('jornadas')->onUpdate('cascade')->onDelete('cascade');
 
 
 

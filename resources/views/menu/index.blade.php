@@ -27,7 +27,9 @@
 						<li><a href="{{route('mostrar_sedes')}}" target="principal">Sedes</a></li>
 						<li><a href="{{route('mostrar_redtematica')}}" target="principal" >Red Tematica</a></li>
 						<li><a href="{{route('mostrar_ambientes')}}"  target="principal" >Ambientes</a></li>
-						<li><a href="{{route('mostrar_areas')}}" target="principal" >Areas</a></li>
+						<li><a href="{{route('mostrar_areas')}}" target="principal">Areas</a></li>
+						<li><a href="{{route('mostrar_programaformacion')}}" target="principal">Programa Formacion</a></li>
+						
 						
 					</ul>
 				</li>
