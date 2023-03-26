@@ -11,11 +11,9 @@ use App\Models\instructor;
 use App\Models\persona;
 use App\Models\red_tematica;
 use App\Models\tipo_contrato;
-<<<<<<< HEAD
+/*
 use App\Models\nivel_formacion;
-use App\Models\jornada;
-=======
->>>>>>> 281acd474f47711bfa14a288d8c6e14ce1ec1dac
+use App\Models\jornada;*/
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -128,21 +126,6 @@ class DatabaseSeeder extends Seeder
                 'correo'=>'samuel@gmail.com'
             ]
         
-<<<<<<< HEAD
-       
-                                    
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-            'password' => bcrypt('holamundo1234')
-        ]);
-        User::factory()->create([
-            'name' => 'coordi',
-            'email' => 'coordi@example.com',
-            'password' => bcrypt('coordi03')
-        ]);
-     
-=======
             );
             instructor::insert([
             'id'=>1,
@@ -165,13 +148,22 @@ class DatabaseSeeder extends Seeder
                 'id_contrato'=>1,
             ]);
                 
-            User::factory(2)->create();
-                                            
             User::factory()->create([
                 'name' => 'Test User',
                 'email' => 'test@example.com',
                 'password' => 'holamundo1234'
             ]);
->>>>>>> 281acd474f47711bfa14a288d8c6e14ce1ec1dac
+                 
+            User::factory()->create([
+                'name' => 'ccoordinador',
+                'email' => 'coordinador@cide.com',
+                'password' => 'soylomejor'
+            ]);
+            User::factory()->create([
+                'name' => 'ximena',
+                'email' => 'ximena171531@gmail.com',
+                'password' => 'mena'
+            ]);
+
     }
-}
+    }

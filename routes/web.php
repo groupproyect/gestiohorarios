@@ -9,12 +9,9 @@ use App\Http\Controllers\InstructorController;
 use App\Http\Controllers\HorarioController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthController;
-<<<<<<< HEAD
-=======
 use App\Http\Controllers\ProgramacionController;
 use App\Http\Controllers\Semaforo_CompetenciaController;
 use App\Http\Controllers\CompetenciaController;
->>>>>>> 281acd474f47711bfa14a288d8c6e14ce1ec1dac
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -126,8 +123,8 @@ Route::get('/principal', function () {
 /*-------------------------------------------------------
 RUTA DE INICIO DE SESION
 --------------------------------------------------------*/
-Route::match(['get','post'],'/iniciosesion/crear' ,[UserController::class,'create'])->name('iniciosesion_cre');
-Route::post('/iniciosesion/guardar', [UserController::class, 'store'])->name('guardar_iniciosesion');
+Route::match(['get','post'],'/registrosesion/crear' ,[UserController::class,'create'])->name('iniciosesion_cre');
+Route::post('/registrosesion/guardar', [UserController::class, 'store'])->name('guardar_registrosesion');
 /*-------------------------------------------------------
 RUTAS DE AUTENTICACION INICIO DE SESION
 --------------------------------------------------------*/
@@ -136,29 +133,20 @@ Route::post('/custom-login', [AuthController::class, 'loginusu'])->name('custom-
 Route::get('/logados', [AuthController::class, 'logados'])->name('logados');
 
 
-<<<<<<< HEAD
-Route::get('/iniciosesion', [AuthController::class, 'indexusu'])->name('home');
-Route::post('/custom-login', [AuthController::class, 'loginusu'])->name('custom-login');
-Route::get('/logados', [AuthController::class, 'logados'])->name('logados');
-=======
 /*-------------------------------------------------------
 RUTAS DE AUTENTICACION HORARIO
 --------------------------------------------------------*/
->>>>>>> 281acd474f47711bfa14a288d8c6e14ce1ec1dac
 
 Route::get('/horario' , function(){ return view('horarios.principal');})->name('horario');
 Route::get('/horario/editar' , function(){ return view('horarios.edicion');})->name('horario_editar');
 
 
 Route::get('/prueba/persona' , [PersonaController::class,'mostrar_person']);
-<<<<<<< HEAD
-=======
 Route::match(['get','post'],'/horario/crear', [HorarioController::class,'prueba'] )->name('prueba_h');
 
 Route::get('/prueba2/horario' , [HorarioController::class,'javascript']);
 
 
 route::post('/actualizar',[InstructorController::class,'update'])->name('actualizarlider');
->>>>>>> 281acd474f47711bfa14a288d8c6e14ce1ec1dac
 
 

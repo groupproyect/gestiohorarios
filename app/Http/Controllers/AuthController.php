@@ -10,11 +10,7 @@ class AuthController extends Controller
     /**
     * Función que muestra la vista de logados o la vista con el formulario de Login
     */
-<<<<<<< HEAD
-=======
 
-    
->>>>>>> 281acd474f47711bfa14a288d8c6e14ce1ec1dac
     public function indexusu()
     {
         // Comprobamos si el usuario ya está logado
@@ -35,31 +31,19 @@ class AuthController extends Controller
     */
     public function loginusu(Request $request)
     {
-<<<<<<< HEAD
-        // Comprobamos que el email y la contraseña han sido introducidos
-=======
         // Comprobamos que el nombre,email y la contraseña han sido introducidos
->>>>>>> 281acd474f47711bfa14a288d8c6e14ce1ec1dac
         $request->validate([
             'name' => 'required',
             'email' => 'required',
             'password' => 'required',
         ]);
     
-<<<<<<< HEAD
-        // Almacenamos las credenciales de nombre, email y contraseña
-=======
         // Almacenamos las credenciales de email y contraseña
->>>>>>> 281acd474f47711bfa14a288d8c6e14ce1ec1dac
         $credentials = $request->only('name','email', 'password');
     
         // Si el usuario existe lo logamos y lo llevamos a la vista de "logados" con un mensaje
         if (Auth::attempt($credentials)) {
-<<<<<<< HEAD
-            return redirect()->intended('logados')
-=======
             return redirect()->intended('logados')//vista_menu
->>>>>>> 281acd474f47711bfa14a288d8c6e14ce1ec1dac
                 ->withSuccess('Logado Correctamente');
         }
     

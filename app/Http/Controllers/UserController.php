@@ -16,7 +16,7 @@ class UserController extends Controller
     }
     public function create()
     {
-        $cod = route('guardar_iniciosesion');
+        $cod = route('guardar_registrosesion');
         $titulo = 'Inicio sesion';
         return view ('Inicio.Inicio',['cod'=>$cod,'titulo'=>$titulo]);
     }
@@ -37,7 +37,7 @@ class UserController extends Controller
     $ini=new User();
     $ini->name=$request->name;
     $ini->email=$request->email;
-    $ini->password= bcrypt($request->password);
+    $ini->password=bcrypt($request->password);
     $ini->save();
     return redirect()->route('vista_menu');
     //return $request;
